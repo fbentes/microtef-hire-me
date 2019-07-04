@@ -1,0 +1,2 @@
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsServer\obj\Debug\StonePaymentsServer.csprojAssemblyReference.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsServer\obj\Debug\StonePaymentsServer.csproj.CoreCompileInputs.cache

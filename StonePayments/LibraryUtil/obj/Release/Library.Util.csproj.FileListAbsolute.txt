@@ -1,0 +1,6 @@
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\bin\Release\Library.Util.dll
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\bin\Release\Library.Util.pdb
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Release\Library.Util.csproj.CoreCompileInputs.cache
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Release\Library.Util.dll
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Release\Library.Util.pdb
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Release\Library.Util.csprojAssemblyReference.cache

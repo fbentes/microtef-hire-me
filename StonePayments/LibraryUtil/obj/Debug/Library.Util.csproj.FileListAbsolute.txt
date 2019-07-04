@@ -1,0 +1,12 @@
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\bin\Debug\Library.Util.dll
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\bin\Debug\Library.Util.pdb
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Debug\Library.Util.csproj.CoreCompileInputs.cache
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Debug\Library.Util.dll
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Debug\Library.Util.pdb
+C:\Projetos\ProvService\ProvServiceSolution\Library.Util\obj\Debug\Library.Util.csprojAssemblyReference.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\LibraryUtil\bin\Debug\Library.Util.dll
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\LibraryUtil\bin\Debug\Library.Util.pdb
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.csprojAssemblyReference.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.csproj.CoreCompileInputs.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.dll
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.pdb

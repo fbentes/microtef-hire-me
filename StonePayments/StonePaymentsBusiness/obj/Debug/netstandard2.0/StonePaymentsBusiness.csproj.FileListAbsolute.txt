@@ -1,0 +1,9 @@
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\bin\Debug\netstandard2.0\StonePaymentsBusiness.deps.json
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\bin\Debug\netstandard2.0\StonePaymentsBusiness.dll
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\bin\Debug\netstandard2.0\StonePaymentsBusiness.pdb
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\obj\Debug\netstandard2.0\StonePaymentsBusiness.csprojAssemblyReference.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\obj\Debug\netstandard2.0\StonePaymentsBusiness.csproj.CoreCompileInputs.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\obj\Debug\netstandard2.0\StonePaymentsBusiness.AssemblyInfoInputs.cache
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\obj\Debug\netstandard2.0\StonePaymentsBusiness.AssemblyInfo.cs
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\obj\Debug\netstandard2.0\StonePaymentsBusiness.dll
+C:\Users\fbent\Documents\GitHub\Stone\microtef-hire-me\StonePayments\StonePaymentsBusiness\obj\Debug\netstandard2.0\StonePaymentsBusiness.pdb
