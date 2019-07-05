@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Json;
 
-namespace Library.Util.Util
+namespace Library.Util
 {
     public static class JSONHelper
     {

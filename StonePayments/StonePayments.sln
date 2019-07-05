@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePaymentsClient", "Ston
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePaymentsServer", "StonePaymentsServer\StonePaymentsServer.csproj", "{4C1CE5A3-A0D7-4164-B4DF-7D0244835A92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePaymentsServer.Tests", "StonePaymentsServer.Tests\StonePaymentsServer.Tests.csproj", "{446043DD-7E7D-47A7-93A5-4E8D1C8AC4FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.Tests", "StonePaymentsServer.Tests\StonePayments.Tests.csproj", "{446043DD-7E7D-47A7-93A5-4E8D1C8AC4FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Util", "LibraryUtil\Library.Util.csproj", "{1E71AD29-8527-4EC6-9815-9AD249CB59F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePaymentsBusiness", "StonePaymentsBusiness\StonePaymentsBusiness.csproj", "{DA5B7672-EA31-4053-8059-7366CE459B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StonePaymentsBusiness", "StonePaymentsBusiness\StonePaymentsBusiness.csproj", "{DA5B7672-EA31-4053-8059-7366CE459B77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

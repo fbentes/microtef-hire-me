@@ -120,4 +120,7 @@
   <data name="SendTransactionError" xml:space="preserve">
     <value>Falha ao enviar transação do cliente para o servidor !</value>
   </data>
+  <data name="TransactionSendOk" xml:space="preserve">
+    <value>Transação enviada com sucesso !</value>
+  </data>
 </root>

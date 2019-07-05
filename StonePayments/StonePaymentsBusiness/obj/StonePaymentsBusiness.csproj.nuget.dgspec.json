@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fbent\\Documents\\GitHub\\Stone\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj": {}
+    "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fbent\\Documents\\GitHub\\Stone\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj": {
+    "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\Stone\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj",
+        "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj",
         "projectName": "StonePaymentsBusiness",
-        "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\Stone\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj",
+        "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj",
         "packagesPath": "C:\\Users\\fbent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fbent\\Documents\\GitHub\\Stone\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\obj\\",
+        "outputPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

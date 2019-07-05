@@ -1,0 +1,15 @@
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\bin\Debug\StonePayments.exe.config
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\bin\Debug\StonePayments.exe
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\bin\Debug\StonePayments.pdb
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePaymentsClient.csprojAssemblyReference.cache
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\MainWindow.g.cs
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\App.g.cs
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePayments_MarkupCompile.cache
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePayments_MarkupCompile.lref
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\MainWindow.baml
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePayments.g.resources
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePayments.Properties.Resources.resources
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePaymentsClient.csproj.GenerateResource.cache
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePaymentsClient.csproj.CoreCompileInputs.cache
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePayments.exe
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments\obj\Debug\StonePayments.pdb

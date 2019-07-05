@@ -68,5 +68,14 @@ namespace StonePaymentsServer {
                 return ResourceManager.GetString("SendTransactionError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transação enviada com sucesso !.
+        /// </summary>
+        internal static string TransactionSendOk {
+            get {
+                return ResourceManager.GetString("TransactionSendOk", resourceCulture);
+            }
+        }
     }
 }
