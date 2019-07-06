@@ -11,42 +11,23 @@ namespace Library.Util
 {
     public static class JSONHelper
     {
-        public static string GetJSONString(string url)
+        public static string Serialize<T>(T obj)
         {
-            HttpWebRequest request =
-                (HttpWebRequest)WebRequest.Create(url);
-            WebResponse response = request.GetResponse();
-
-            using (Stream stream = response.GetResponseStream())
-            {
-                StreamReader reader = new StreamReader(
-                    stream, Encoding.UTF8);
-                return reader.ReadToEnd();
-            }
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(obj.GetType());
+            MemoryStream ms = new MemoryStream();
+            serializer.WriteObject(ms, obj);
+            string retVal = Encoding.UTF8.GetString(ms.ToArray());
+            return retVal;
         }
 
-        public static T GetObjectFromJSONString<T>(
-            string json) where T : new()
+        public static T Deserialize<T>(string json)
         {
-            using (MemoryStream stream = new MemoryStream(
-                Encoding.UTF8.GetBytes(json)))
-            {
-                DataContractJsonSerializer serializer =
-                    new DataContractJsonSerializer(typeof(T));
-                return (T)serializer.ReadObject(stream);
-            }
-        }
-
-        public static T[] GetArrayFromJSONString<T>(
-            string json) where T : new()
-        {
-            using (MemoryStream stream = new MemoryStream(
-                Encoding.UTF8.GetBytes(json)))
-            {
-                DataContractJsonSerializer serializer =
-                    new DataContractJsonSerializer(typeof(T[]));
-                return (T[])serializer.ReadObject(stream);
-            }
+            T obj = Activator.CreateInstance<T>();
+            MemoryStream ms = new MemoryStream(Encoding.Unicode.GetBytes(json));
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(obj.GetType());
+            obj = (T)serializer.ReadObject(ms);
+            ms.Close();
+            return obj;
         }
     }
 }

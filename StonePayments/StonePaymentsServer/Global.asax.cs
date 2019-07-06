@@ -1,4 +1,9 @@
-﻿using System;
+﻿using LightInject;
+using LightInject.Web;
+using StonePaymentsServer.Controllers;
+using StonePaymentsServer.Dal;
+using StonePaymentsServer.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +23,27 @@ namespace StonePaymentsServer
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            dependencyInjection();
+        }
+
+        private void dependencyInjection()
+        {
+            var container = new ServiceContainer();
+
+            container.EnableAnnotatedPropertyInjection();
+
+            container.RegisterApiControllers();
+
+            container.EnablePerWebRequestScope();
+
+            container.EnableWebApi(GlobalConfiguration.Configuration);
+
+            container.Register<ITransactionDao, TransactionDao>();
+
+            container.Register<ITransactionService, TransactionService>();
+
+            container.Register<ITransactionController, TransactionController>();
         }
     }
 }

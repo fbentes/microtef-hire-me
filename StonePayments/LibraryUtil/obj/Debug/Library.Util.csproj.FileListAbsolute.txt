@@ -111,6 +111,7 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Lib
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\bin\Debug\Json.Net.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\bin\Debug\Newtonsoft.Json.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.csprojAssemblyReference.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.csproj.CoreCompileInputs.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.csproj.CopyComplete
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\LibraryUtil\obj\Debug\Library.Util.dll

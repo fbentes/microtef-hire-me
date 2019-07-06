@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LightInject.xUnit2</name>
+    </assembly>
+    <members>
+        <member name="T:LightInject.xUnit2.InjectDataAttribute">
+            <summary>
+            Allows LightInject to resolve test method arguments.
+            </summary>
+        </member>
+        <member name="M:LightInject.xUnit2.InjectDataAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightInject.xUnit2.InjectDataAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:LightInject.xUnit2.InjectDataAttribute.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightInject.xUnit2.InjectDataAttribute"/> class.
+            </summary>
+            <param name="data">An array of values to be passed to the test method.</param>
+        </member>
+        <member name="M:LightInject.xUnit2.InjectDataAttribute.EndScope(System.Reflection.MethodInfo)">
+            <summary>
+            Ends the <see cref="T:LightInject.Scope"/> represented by the given <paramref name="method"/>.
+            </summary>
+            <param name="method">The <see cref="T:System.Reflection.MethodInfo"/> representing the method for which to end the <see cref="T:LightInject.Scope"/>.</param>
+        </member>
+        <member name="M:LightInject.xUnit2.InjectDataAttribute.GetData(System.Reflection.MethodInfo)">
+            <summary>
+            Gets a list of argument data resolved using an <see cref="T:LightInject.IServiceContainer"/> instance.
+            </summary>
+            <param name="methodUnderTest">The test method currently being executed.</param>
+            <returns>A list of argument data resolved using an <see cref="T:LightInject.IServiceContainer"/> instance.</returns>
+        </member>
+        <member name="M:LightInject.xUnit2.InjectDataAttribute.EndAllScopes">
+            <summary>
+            This method is only executed when the test app domains are unloaded.
+            </summary>
+        </member>
+        <member name="T:LightInject.xUnit2.ScopedAttribute">
+            <summary>
+            Indicates that a new <see cref="T:LightInject.Scope"/> should be started for this test method.
+            </summary>
+        </member>
+        <member name="M:LightInject.xUnit2.ScopedAttribute.After(System.Reflection.MethodInfo)">
+            <summary>
+            This method is called after the test method is executed.
+            </summary>
+            <param name="methodUnderTest">The method under test</param>
+        </member>
+    </members>
+</doc>

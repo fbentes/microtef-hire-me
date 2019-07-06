@@ -6,37 +6,36 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Library.Util;
+using LightInject;
 using StonePaymentsBusiness;
 using StonePaymentsServer.Dal;
+using StonePaymentsServer.Services;
 
 namespace StonePaymentsServer.Controllers
 {
-    public class TransactionController : ApiController
+    public class TransactionController : ApiController, ITransactionController
     {
-        private TransactionDao dao;
-
-        public TransactionController()
-        {
-            dao = new TransactionDao();
-        }
+        [Inject]
+        public ITransactionService TransactionService { get; set; }
 
         [HttpGet]
         [Route("stone/transactions")]
         public async Task<IHttpActionResult> GetTransactions()
         {
-            var transactions = await dao.GetTransactions();
+            var transactions = await TransactionService.GetTransactions();
 
             return Ok<List<TransactionModel>>(transactions);
         }
 
         [HttpPost]
-        public async Task<IHttpActionResult> SendTransaction([FromBody]object json)
+        [Route("stone/sendTransaction")]
+        public async Task<IHttpActionResult> SendTransaction([FromBody]TransactionModel json)
         {
-            var transactionModel = JSONHelper.GetObjectFromJSONString<TransactionModel>(json.ToString());
+            //var transactionModel = JSONHelper.Deserialize<TransactionModel>(json.ToString());
 
             try
             {
-                await dao.SendTransaction(transactionModel);
+                await TransactionService.SendTransaction(json);
 
                 return Ok<string>(StonePaymentResource.TransactionSendOk);
             }
