@@ -1,5 +1,7 @@
 Seguir os passos:
 
+Restaurar o arquivo SQLServerDataBase\Backup\StonePaymentsDataBase numa instância do SQL Server.
+
 
 No projeto StonePayments.Tests (arquivo CryptographyTest.cs):
 
