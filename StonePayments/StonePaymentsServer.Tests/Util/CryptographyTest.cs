@@ -46,7 +46,7 @@ namespace StonePaymentsServer.Tests
         [TestMethod]
         public void TestEncrypt()
         {
-            String EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=b3icud0;", keyString);
+            String EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=senha;", keyString);
 
             Assert.IsNotNull(EncryptedPassword);
         }
@@ -54,7 +54,7 @@ namespace StonePaymentsServer.Tests
         [TestMethod]
         public void TestDecrypt()
         {
-            String EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=b3icud0;", keyString);
+            String EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=senha;", keyString);
 
             String DecryptedPassword = Cryptography.Decrypt(EncryptedPassword, keyString);
 
