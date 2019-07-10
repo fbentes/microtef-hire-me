@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StonePaymentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Customer" Type="Guid" Nullable="false" />
+    <Property Name="Number" Type="Int64" Nullable="false" />
+    <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CardBrand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HasPassword" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Customer1" Relationship="Self.FK__Card__Customer__6383C8BA" FromRole="Card" ToRole="Customer" />
+    <NavigationProperty Name="Transactions" Relationship="Self.FK__Transactio__Card__628FA481" FromRole="Card" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreditLimit" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Cards" Relationship="Self.FK__Card__Customer__6383C8BA" FromRole="Customer" ToRole="Card" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Card" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Number" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Card1" Relationship="Self.FK__Transactio__Card__628FA481" FromRole="Transaction" ToRole="Card" />
+  </EntityType>
+  <Association Name="FK__Card__Customer__6383C8BA">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Card" Type="Self.Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Card">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transactio__Card__628FA481">
+    <End Role="Card" Type="Self.Card" Multiplicity="1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Card">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="Card" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StonePaymentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cards" EntityType="Self.Card" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+    <AssociationSet Name="FK__Card__Customer__6383C8BA" Association="Self.FK__Card__Customer__6383C8BA">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Card" EntitySet="Cards" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transactio__Card__628FA481" Association="Self.FK__Transactio__Card__628FA481">
+      <End Role="Card" EntitySet="Cards" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,8 +1,9 @@
-﻿namespace StonePaymentsBusiness
+﻿using Library.Util;
+
+namespace StonePaymentsBusiness
 {
-    public class CustomerModel
+    public class CustomerModel: BaseEntity
     {
-        public System.Guid Id { get; set; }
         public string Nome { get; set; }
         public double CreditLimit { get; set; }
 

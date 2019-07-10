@@ -50,7 +50,7 @@ namespace StonePaymentsServer.Tests.Controllers
 
 
             // Act
-            IHttpActionResult result = await Controller.SendTransaction(json) as IHttpActionResult;
+            IHttpActionResult result = await Controller.SendTransaction(transactionModel) as IHttpActionResult;
 
             // Assert
             MSTest.Assert.IsNotNull(result);

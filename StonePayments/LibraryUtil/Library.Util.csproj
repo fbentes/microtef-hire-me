@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\BaseValidatorAttribute.cs" />
     <Compile Include="Attributes\DateTimeFormatAttribute.cs" />
+    <Compile Include="Attributes\RangeValuesAttribute.cs" />
+    <Compile Include="Attributes\RequiredValueAttribute.cs" />
+    <Compile Include="Util\ValidationProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\BaseEntity.cs" />
     <Compile Include="Util\ConvertObject.cs" />
     <Compile Include="Util\Cryptography.cs" />
     <Compile Include="Util\DataBaseConnection.cs" />
+    <Compile Include="Util\ErrorList.cs" />
     <Compile Include="Util\JSONHelper.cs" />
     <Compile Include="Util\KeyStringConnection.cs" />
   </ItemGroup>

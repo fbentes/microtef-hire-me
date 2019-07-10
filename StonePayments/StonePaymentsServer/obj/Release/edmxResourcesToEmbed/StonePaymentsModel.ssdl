@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StonePaymentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Customer" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Number" Type="bigint" Nullable="false" />
+    <Property Name="ExpirationDate" Type="date" Nullable="false" />
+    <Property Name="CardBrand" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HasPassword" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreditLimit" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Card" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Number" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Card__Customer__6383C8BA">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Card" Type="Self.Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Card">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transactio__Card__628FA481">
+    <End Role="Card" Type="Self.Card" Multiplicity="1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Card">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="Card" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StonePaymentsModelStoreContainer">
+    <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Card__Customer__6383C8BA" Association="Self.FK__Card__Customer__6383C8BA">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Card" EntitySet="Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transactio__Card__628FA481" Association="Self.FK__Transactio__Card__628FA481">
+      <End Role="Card" EntitySet="Card" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

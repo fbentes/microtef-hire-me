@@ -1,8 +1,9 @@
-﻿namespace StonePaymentsBusiness
+﻿using Library.Util;
+
+namespace StonePaymentsBusiness
 {
-    public class CardModel
+    public class CardModel: BaseEntity
     {
-        public System.Guid Id { get; set; }
         public CustomerModel Customer { get; set; }
         public long Number { get; set; }
         public System.DateTime ExpirationDate { get; set; }

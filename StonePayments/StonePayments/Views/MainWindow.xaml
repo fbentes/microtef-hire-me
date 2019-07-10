@@ -1,0 +1,39 @@
+﻿<Window x:Class="StonePayments.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StonePayments"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="4" Text="Invio de Transação para o Servidor" HorizontalAlignment="Center" FontWeight="Bold"/>
+
+        <Label Grid.Column="0" Grid.Row="1" Margin="4" Content="CardNumber:" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="4" Text="{Binding CardNumber, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Column="0" Grid.Row="2" Margin="4" Content="Amount:" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="4" Text="{Binding Amount, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
+
+        <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Type:" HorizontalAlignment="Right"/>
+        <ComboBox Grid.Column="1" Grid.Row="3" ItemsSource="{Binding TypeList}" Margin="4" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200" />
+
+        <Label Grid.Column="0" Grid.Row="4" Margin="4" Content="Number:" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Margin="4" Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
+        <Button Content="Enviar transação" Grid.Column="1" HorizontalAlignment="Center" Margin="4" Grid.Row="5" VerticalAlignment="Top" Width="105" Command="{Binding SendTransactionCommand}"/>
+
+    </Grid>
+</Window>

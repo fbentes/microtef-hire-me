@@ -25,6 +25,15 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Library.Util/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Library.Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Util.dll": {}
+        }
       }
     }
   },
@@ -171,10 +180,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Library.Util/1.0.0": {
+      "type": "project",
+      "path": "../LibraryUtil/Library.Util.csproj",
+      "msbuildProject": "../LibraryUtil/Library.Util.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Library.Util >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -210,7 +225,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\LibraryUtil\\Library.Util.csproj": {
+              "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\LibraryUtil\\Library.Util.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
