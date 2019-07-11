@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StonePaymentsBusiness;
+using StonePayments.Business;
 using LightInject;
-using StonePaymentsServer.Services;
+using StonePayments.Server.Services;
 
-namespace StonePaymentsServer.Tests.Services
+namespace StonePayments.Server.Tests.Services
 {
 
     [TestClass]
@@ -23,10 +23,7 @@ namespace StonePaymentsServer.Tests.Services
             var transactionModel = new TransactionModel
             {
                 Id = Guid.NewGuid(),                
-                Card = new CardModel
-                {
-                    Id = Guid.Parse("f4023d55-c15e-4f70-a8f3-0ac013d16bb6")                    
-                },
+                CardNumber = 1234,
                 Amount = new Random().NextDouble(),
                 Number = (byte)new Random().Next(1,36),
                 Type = TransactionType.Credit

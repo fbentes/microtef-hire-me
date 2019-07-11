@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Library.Util;
+using StonePayments.Util;
 using Newtonsoft.Json;
 
-namespace StonePaymentsServer.Tests.Util
+namespace StonePayments.Server.Tests.Util
 {
     [TestClass]
     public class DataBaseConnectionTest

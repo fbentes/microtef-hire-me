@@ -6,21 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace StonePayments
+namespace StonePayments.Client
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
-        /*
-        [STAThread]
-        public static void Main()
-        {
-            var application = new App();
-            application.InitializeComponent();
-            application.Run();
-        }
-        */
     }
 }

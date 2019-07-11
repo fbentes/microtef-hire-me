@@ -1,6 +1,6 @@
-﻿using Library.Util;
+﻿using StonePayments.Util;
 
-namespace StonePaymentsBusiness
+namespace StonePayments.Business
 {
     public class CustomerModel: BaseEntity
     {

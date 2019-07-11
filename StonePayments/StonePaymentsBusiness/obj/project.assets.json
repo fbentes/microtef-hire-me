@@ -26,13 +26,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Library.Util/1.0.0": {
+      "StonePayments.Util/1.0.0": {
         "type": "project",
         "compile": {
-          "bin/placeholder/Library.Util.dll": {}
+          "bin/placeholder/StonePayments.Util.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Library.Util.dll": {}
+          "bin/placeholder/StonePayments.Util.dll": {}
         }
       }
     }
@@ -181,16 +181,16 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Library.Util/1.0.0": {
+    "StonePayments.Util/1.0.0": {
       "type": "project",
-      "path": "../LibraryUtil/Library.Util.csproj",
-      "msbuildProject": "../LibraryUtil/Library.Util.csproj"
+      "path": "../LibraryUtil/StonePayments.Util.csproj",
+      "msbuildProject": "../LibraryUtil/StonePayments.Util.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Library.Util >= 1.0.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "StonePayments.Util >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -201,9 +201,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj",
-      "projectName": "StonePaymentsBusiness",
-      "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePaymentsBusiness.csproj",
+      "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePayments.Business.csproj",
+      "projectName": "StonePayments.Business",
+      "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\StonePayments.Business.csproj",
       "packagesPath": "C:\\Users\\fbent\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePaymentsBusiness\\obj\\",
       "projectStyle": "PackageReference",
@@ -226,8 +226,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\LibraryUtil\\Library.Util.csproj": {
-              "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\LibraryUtil\\Library.Util.csproj"
+            "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\LibraryUtil\\StonePayments.Util.csproj": {
+              "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\LibraryUtil\\StonePayments.Util.csproj"
             }
           }
         }

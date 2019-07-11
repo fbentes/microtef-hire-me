@@ -1,7 +1,7 @@
-﻿using StonePaymentsBusiness;
+﻿using StonePayments.Business;
 using System.ComponentModel;
 
-namespace StonePayments.ViewModels
+namespace StonePayments.Client.ViewModels
 {
     public class TransactionViewModel : INotifyPropertyChanged
     {
@@ -21,7 +21,7 @@ namespace StonePayments.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public long CardNumber
+        public long? CardNumber
         {
             get { return TransactionModel.Card.Number; }
             set
@@ -35,7 +35,7 @@ namespace StonePayments.ViewModels
             }
         }
 
-        public double Amount
+        public double? Amount
         {
             get { return TransactionModel.Amount; }
             set
@@ -68,7 +68,7 @@ namespace StonePayments.ViewModels
             get { return TransactionModel.TransactionTypeList; }
         }
 
-        public byte Number  // Número de parcelas
+        public byte? Number  // Número de parcelas
         {
             get { return TransactionModel.Number; }
             set

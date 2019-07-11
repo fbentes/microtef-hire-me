@@ -6,9 +6,8 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using Library.Util;
 
-namespace StonePaymentsServer
+namespace StonePayments.Server
 {
     using System;
     using System.Data.Entity;
@@ -19,7 +18,6 @@ namespace StonePaymentsServer
         public StonePaymentsEntities()
             : base("name=StonePaymentsEntities")
         {
-            Database.Connection.ConnectionString = DataBaseConnection.GetConnectionString(@"DataBaseConnection.json", KeyStringConnection.VALUE);
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

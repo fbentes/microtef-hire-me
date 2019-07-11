@@ -135,6 +135,7 @@
     <Compile Include="Dal\TransactionDaoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\DataBaseConnectionTest.cs" />
+    <Compile Include="Validations\TransactionModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -144,19 +145,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryUtil\Library.Util.csproj">
+    <ProjectReference Include="..\LibraryUtil\StonePayments.Util.csproj">
       <Project>{1e71ad29-8527-4ec6-9815-9ad249cb59f6}</Project>
-      <Name>Library.Util</Name>
+      <Name>StonePayments.Util</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StonePaymentsBusiness\StonePaymentsBusiness.csproj">
+    <ProjectReference Include="..\StonePaymentsBusiness\StonePayments.Business.csproj">
       <Project>{da5b7672-ea31-4053-8059-7366ce459b77}</Project>
-      <Name>StonePaymentsBusiness</Name>
+      <Name>StonePayments.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StonePaymentsServer\StonePaymentsServer.csproj">
-      <Project>{4C1CE5A3-A0D7-4164-B4DF-7D0244835A92}</Project>
-      <Name>StonePaymentsServer</Name>
+    <ProjectReference Include="..\StonePaymentsServer\StonePayments.Server.csproj">
+      <Project>{4c1ce5a3-a0d7-4164-b4df-7d0244835a92}</Project>
+      <Name>StonePayments.Server</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

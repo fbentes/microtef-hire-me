@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace StonePaymentsBusiness
+namespace StonePayments.Business
 {
     public class SendTransactionException : Exception
     {

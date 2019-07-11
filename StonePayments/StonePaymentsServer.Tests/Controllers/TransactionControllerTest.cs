@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Library.Util;
 using MSTest = Microsoft.VisualStudio.TestTools.UnitTesting;
-using StonePaymentsBusiness;
-using StonePaymentsServer.Controllers;
+using StonePayments.Business;
+using StonePayments.Server.Controllers;
 using LightInject;
-using Xunit;
 
-namespace StonePaymentsServer.Tests.Controllers
+namespace StonePayments.Server.Tests.Controllers
 {
     [MSTest.TestClass]
     public class TransactionControllerTest: BaseTest
@@ -34,19 +32,15 @@ namespace StonePaymentsServer.Tests.Controllers
         public async Task TestSendTransaction()
         {
 
-        var transactionModel = new TransactionModel
-            {
-                Id = Guid.NewGuid(),
-                Card = new CardModel
+            var transactionModel = new TransactionModel
                 {
-                    Id = Guid.Parse("f4023d55-c15e-4f70-a8f3-0ac013d16bb6")
-                },
-                Amount = new Random().NextDouble(),
-                Number = (byte)new Random().Next(1, 36),
-                Type = TransactionType.Credit
-            };
+                    CardNumber = 1234,
+                    Amount = new Random().NextDouble(),
+                    Number = (byte)new Random().Next(1, 48),
+                    Type = TransactionType.Credit
+                };
 
-            var json = JSONHelper.Serialize<TransactionModel>(transactionModel);
+            //var json = JSONHelper.Serialize<TransactionModel>(transactionModel);
 
 
             // Act

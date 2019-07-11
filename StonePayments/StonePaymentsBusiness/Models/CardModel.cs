@@ -1,15 +1,15 @@
-﻿using Library.Util;
+﻿using StonePayments.Util;
 
-namespace StonePaymentsBusiness
+namespace StonePayments.Business
 {
     public class CardModel: BaseEntity
     {
         public CustomerModel Customer { get; set; }
-        public long Number { get; set; }
-        public System.DateTime ExpirationDate { get; set; }
+        public long? Number { get; set; }
+        public System.DateTime? ExpirationDate { get; set; }
         public CardBrand CardBrand { get; set; }
         public string Password { get; set; }
         public CardType Type { get; set; }
-        public bool HasPassword { get; set; }
+        public bool? HasPassword { get; set; }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StonePaymentsServer {
+namespace StonePayments.Server {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace StonePaymentsServer {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("StonePaymentsServer.StonePaymentResource", typeof(StonePaymentResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("StonePayments.Server.StonePaymentResource", typeof(StonePaymentResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

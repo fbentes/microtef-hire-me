@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.Serialization.Json;
 
-namespace Library.Util
+namespace StonePayments.Util
 {
     public static class JSONHelper
     {

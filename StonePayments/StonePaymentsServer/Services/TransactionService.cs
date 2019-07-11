@@ -1,10 +1,10 @@
 ﻿using LightInject;
-using StonePaymentsBusiness;
-using StonePaymentsServer.Dal;
+using StonePayments.Business;
+using StonePayments.Server.Dal;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace StonePaymentsServer.Services
+namespace StonePayments.Server.Services
 {
     public class TransactionService : ITransactionService
     {

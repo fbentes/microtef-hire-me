@@ -1,8 +1,8 @@
 ﻿using LightInject;
 using LightInject.Web;
-using StonePaymentsServer.Controllers;
-using StonePaymentsServer.Dal;
-using StonePaymentsServer.Services;
+using StonePayments.Server.Controllers;
+using StonePayments.Server.Dal;
+using StonePayments.Server.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

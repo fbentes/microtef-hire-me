@@ -1,12 +1,11 @@
-﻿using StonePaymentsBusiness;
+﻿using StonePayments.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using System.Web;
 
-namespace StonePaymentsServer.Dal
+namespace StonePayments.Server.Dal
 {
     public class TransactionDao : ITransactionDao
     {
@@ -18,12 +17,21 @@ namespace StonePaymentsServer.Dal
 
                 try
                 {
+                        Card card = await (from c in context.Cards
+                                           where c.Number == transactionModel.CardNumber
+                                           select c).FirstOrDefaultAsync<Card>();
+
+                        if(card == null)
+                        {
+                            throw new Exception("O Card não foi encontrado com o número " + transactionModel.Card.Number);
+                        }
+
                         var transaction = new Transaction
                         {
                             Id = Guid.NewGuid(),
-                            Amount = transactionModel.Amount,
-                            Card = transactionModel.Card.Id,
-                            Number = transactionModel.Number,
+                            Amount = transactionModel.Amount.Value,
+                            Card = card.Id,
+                            Number = transactionModel.Number.Value,
                             Type = transactionModel.Type.ToString()
                         };
 

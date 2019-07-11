@@ -1,11 +1,11 @@
-﻿using StonePaymentsBusiness;
+﻿using StonePayments.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StonePaymentsServer.Dal
+namespace StonePayments.Server.Dal
 {
     public interface ITransactionDao
     {

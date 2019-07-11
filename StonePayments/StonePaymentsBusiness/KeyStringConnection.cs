@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StonePaymentsBusiness
+namespace StonePayments.Business
 {
     public sealed class KeyStringConnection
     {

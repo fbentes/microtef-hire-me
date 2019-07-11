@@ -1,9 +1,9 @@
-﻿using StonePaymentsBusiness;
+﻿using StonePayments.Business;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace StonePaymentsServer.Controllers
+namespace StonePayments.Server.Controllers
 {
     public interface ITransactionController
     {

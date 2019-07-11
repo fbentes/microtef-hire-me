@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Library;
-using Library.Util;
+using StonePayments.Util;
 
-namespace StonePaymentsServer.Tests
+namespace StonePayments.Server.Tests
 {
     [TestClass]
     public class CryptographyTest

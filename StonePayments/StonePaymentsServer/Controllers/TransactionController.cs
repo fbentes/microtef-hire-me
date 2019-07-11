@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Library.Util;
 using LightInject;
-using StonePaymentsBusiness;
-using StonePaymentsServer.Dal;
-using StonePaymentsServer.Services;
+using StonePayments.Business;
+using StonePayments.Server.Services;
 
-namespace StonePaymentsServer.Controllers
+namespace StonePayments.Server.Controllers
 {
     public class TransactionController : ApiController, ITransactionController
     {
@@ -29,13 +24,11 @@ namespace StonePaymentsServer.Controllers
 
         [HttpPost]
         [Route("stone/sendTransaction")]
-        public async Task<IHttpActionResult> SendTransaction([FromBody]TransactionModel json)
+        public async Task<IHttpActionResult> SendTransaction([FromBody]TransactionModel transactionModel)
         {
-            //var transactionModel = JSONHelper.Deserialize<TransactionModel>(json.ToString());
-
             try
             {
-                await TransactionService.SendTransaction(json);
+                await TransactionService.SendTransaction(transactionModel);
 
                 return Ok<string>(StonePaymentResource.TransactionSendOk);
             }

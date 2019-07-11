@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StonePaymentsServer
+namespace StonePayments.Server
 {
     using System;
     using System.Collections.Generic;

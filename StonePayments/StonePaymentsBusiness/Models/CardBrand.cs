@@ -1,4 +1,4 @@
-﻿namespace StonePaymentsBusiness
+﻿namespace StonePayments.Business
 {
     public enum CardBrand
     {

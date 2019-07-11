@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
-using Library.Util.Attributes;
 using System.Windows;
-using Library.Util;
+using StonePayments.Util;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
-namespace StonePayments.ViewModels
+namespace StonePayments.Client.ViewModels
 {
     public class SendTransactionCommand : ICommand
     {
@@ -20,39 +20,52 @@ namespace StonePayments.ViewModels
 
         public bool CanExecute(object parameter)
         {
-            ErrorList errorList;
-
-            bool isValid = ValidationProperties.IsValid(transactionViewModel.TransactionModel, out errorList);
-
-            if(!isValid)
-            {
-                MessageBox.Show(errorList.ToString());
-            }
-
-            return isValid;
+            return true;
         }
 
-        public void Execute(object parameter)
+        private void SendTransaction()
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://192.168.0.11:9090/stone/");
-                //HTTP GET
-                var responseTask = client.GetAsync("sendTransaction");
-                responseTask.Wait();
+                client.BaseAddress = new Uri("http://192.168.0.11:9090/");
 
-                var result = responseTask.Result;
-                if (result.IsSuccessStatusCode)
+                client.DefaultRequestHeaders.Accept.Add(
+                        new MediaTypeWithQualityHeaderValue("application/json"));
+
+                ErrorList errorList;
+
+                bool isValid = ValidationProperties.IsValid(transactionViewModel.TransactionModel, out errorList);
+
+                if (!isValid)
+                {
+                    MessageBox.Show(errorList.ToString());
+                    return;
+                }
+
+                var response = client.PostAsJsonAsync("stone/SendTransaction", 
+                                                      transactionViewModel.TransactionModel).Result;
+
+                if (response.IsSuccessStatusCode)
                 {
 
-                    var readTask = result.Content.ReadAsStringAsync();
+                    var readTask = response.Content.ReadAsStringAsync();
                     readTask.Wait();
 
                     var message = readTask.Result;
 
                     MessageBox.Show(message);
                 }
+                else
+                {
+                    MessageBox.Show("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
+                }
             }
+        }
+
+        public void Execute(object parameter)
+        {
+            SendTransaction();
+            //SendTransaction().GetAwaiter().GetResult();
         }
     }
 }

@@ -1,13 +1,9 @@
-﻿using Library.Util;
-using Library.Util.Attributes;
+﻿using StonePayments.Util;
+using StonePayments.Util.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Library.Util
+namespace StonePayments.Util
 {
     public static class ValidationProperties
     {
@@ -34,15 +30,26 @@ namespace Library.Util
                                 errorList.Add("O campo " +propInfo.Name+ " não pode ser nulo !");
                             }
                         }
-                        else if(baseValidatorAttribute is RangeValuesAttribute)
+                        else if(baseValidatorAttribute is MinRequiredValueAttribute)
                         {
-                            var range = baseValidatorAttribute as RangeValuesAttribute;
+                            var range = baseValidatorAttribute as MinRequiredValueAttribute;
 
-                            long v = Convert.ToInt64(value);
+                            var v = Convert.ToDouble(value);
 
-                            if (value == null || v < range.MinValue || v > range.MaxValue)
+                            if (v < range.MinValue)
                             {
-                                errorList.Add("O campo " + propInfo.Name + " deve estar entre " + range.MinValue + " e " + range.MaxValue);
+                                errorList.Add("O campo " + propInfo.Name + " tem que ter valor mínimo = " + range.MinValue + "!");
+                            }
+                        }
+                        else if (baseValidatorAttribute is RangeLengthValuesAttribute)
+                        {
+                            var range = baseValidatorAttribute as RangeLengthValuesAttribute;
+
+                            if (value == null ||
+                                value.ToString().Trim().Length < range.MinLengthValue ||
+                                value.ToString().Trim().Length > range.MaxLengthValue)
+                            {
+                                errorList.Add("O campo " + propInfo.Name + " deve conter de " + range.MinLengthValue + " a " + range.MaxLengthValue + " dígitos !");
                             }
                         }
                     }

@@ -1,8 +1,8 @@
-﻿using StonePaymentsBusiness;
+﻿using StonePayments.Business;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace StonePaymentsServer.Services
+namespace StonePayments.Server.Services
 {
     public interface ITransactionService
     {
