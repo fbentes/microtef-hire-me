@@ -198,11 +198,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\ITransactionController.cs" />
     <Compile Include="Services\TransactionService.cs" />
-    <Compile Include="StonePaymentResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StonePaymentResource.resx</DependentUpon>
-    </Compile>
     <Compile Include="StonePaymentsModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -337,12 +332,6 @@
       <Project>{da5b7672-ea31-4053-8059-7366ce459b77}</Project>
       <Name>StonePayments.Business</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="StonePaymentResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>StonePaymentResource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

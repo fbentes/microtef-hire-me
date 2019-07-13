@@ -26,3 +26,5 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.csproj.CopyComplete
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.pdb
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.StonePaymentResource.resources
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.csproj.GenerateResource.cache

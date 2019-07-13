@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AmountAtLeastTenCents" xml:space="preserve">
+    <value>O valor da transação tem que ser no mínimo 10 centavos !</value>
+  </data>
+  <data name="CardNumberBetween12_19_Digits" xml:space="preserve">
+    <value>O campo CardNumber deve estar entre 12 a 19 dígitos !</value>
+  </data>
+  <data name="CardNumberNotNull" xml:space="preserve">
+    <value>O campo CardNumber não pode ser vazio !</value>
+  </data>
+  <data name="NumberMinValueEqualOne" xml:space="preserve">
+    <value>O número de parcelas deve ser no mínimo igual 1 !</value>
+  </data>
+  <data name="PasswordBetween4_6_Digits" xml:space="preserve">
+    <value>A senha deve ter entre 4 a 6 dítigos !</value>
+  </data>
+  <data name="PasswordIsNotBeNull" xml:space="preserve">
+    <value>O campo Senha não pode ser vazio !</value>
+  </data>
   <data name="SendTransactionError" xml:space="preserve">
     <value>Falha ao enviar transação do cliente para o servidor !</value>
   </data>

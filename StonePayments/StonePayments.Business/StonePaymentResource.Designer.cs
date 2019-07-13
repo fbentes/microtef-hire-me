@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StonePayments.Server {
+namespace StonePayments.Business {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace StonePayments.Server {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class StonePaymentResource {
+    public class StonePaymentResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -39,7 +39,7 @@ namespace StonePayments.Server {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("StonePayments.Server.StonePaymentResource", typeof(StonePaymentResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("StonePayments.Business.StonePaymentResource", typeof(StonePaymentResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,18 +61,72 @@ namespace StonePayments.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O valor da transação tem que ser no mínimo 10 centavos !.
+        /// </summary>
+        public static string AmountAtLeastTenCents {
+            get {
+                return ResourceManager.GetString("AmountAtLeastTenCents", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to O campo CardNumber deve estar entre 12 a 19 dígitos !.
+        /// </summary>
+        public static string CardNumberBetween12_19_Digits {
+            get {
+                return ResourceManager.GetString("CardNumberBetween12_19_Digits", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to O campo CardNumber não pode ser vazio !.
+        /// </summary>
+        public static string CardNumberNotNull {
+            get {
+                return ResourceManager.GetString("CardNumberNotNull", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to O número de parcelas deve ser no mínimo igual 1 !.
+        /// </summary>
+        public static string NumberMinValueEqualOne {
+            get {
+                return ResourceManager.GetString("NumberMinValueEqualOne", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to A senha deve ter entre 4 a 6 dítigos !.
+        /// </summary>
+        public static string PasswordBetween4_6_Digits {
+            get {
+                return ResourceManager.GetString("PasswordBetween4_6_Digits", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to O campo Senha não pode ser vazio !.
+        /// </summary>
+        public static string PasswordIsNotBeNull {
+            get {
+                return ResourceManager.GetString("PasswordIsNotBeNull", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Falha ao enviar transação do cliente para o servidor !.
         /// </summary>
-        internal static string SendTransactionError {
+        public static string SendTransactionError {
             get {
                 return ResourceManager.GetString("SendTransactionError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Transação enviada com sucesso !.
         /// </summary>
-        internal static string TransactionSendOk {
+        public static string TransactionSendOk {
             get {
                 return ResourceManager.GetString("TransactionSendOk", resourceCulture);
             }

@@ -8,4 +8,19 @@
     <ProjectReference Include="..\StonePayments.Util\StonePayments.Util.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="StonePaymentResource.Designer.cs">
+      <DependentUpon>StonePaymentResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="StonePaymentResource.resx">
+      <LastGenOutput>StonePaymentResource.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

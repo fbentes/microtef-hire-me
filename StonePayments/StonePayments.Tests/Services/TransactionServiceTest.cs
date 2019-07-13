@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StonePayments.Business;
 using LightInject;
 using StonePayments.Server.Services;
+using System.Collections.Generic;
 
 namespace StonePayments.Server.Tests.Services
 {
@@ -18,20 +19,44 @@ namespace StonePayments.Server.Tests.Services
         }
 
         [TestMethod]
-        public async Task TestSendTransaction()
+        public async Task TestSendTransactionSucess()
         {
             var transactionModel = new TransactionModel
             {
-                Id = Guid.NewGuid(),                
-                CardNumber = 1234,
+                CardNumber = 1234654789324,
                 Amount = new Random().NextDouble(),
+                Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1,36),
-                Type = TransactionType.Credit
+                Password = "123456789"
             };
 
             try
             {
-                await TransactionService.SendTransaction(transactionModel);
+                List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
+
+                Assert.IsTrue(true);
+            }
+            catch (SendTransactionException)
+            {
+                Assert.IsFalse(true);
+            }
+        }
+
+        [TestMethod]
+        public async Task TestSendTransactionWithFailCardNumber()
+        {
+            var transactionModel = new TransactionModel
+            {
+                CardNumber = 123465478932,
+                Amount = new Random().NextDouble(),
+                Type = TransactionType.Credit,
+                Number = (byte)new Random().Next(1, 36),
+                Password = "123456789"
+            };
+
+            try
+            {
+                List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
 
                 Assert.IsTrue(true);
             }

@@ -6,7 +6,7 @@ using System;
 namespace StonePayments.Server.Tests.Validations
 {
     [TestClass]
-    public class TransactionModelTest
+    public class TransactionValidationModelTest
     {
         [TestMethod]
         public void TestValidationPropertiesWithAtLeastOneError()
@@ -41,12 +41,11 @@ namespace StonePayments.Server.Tests.Validations
         {
             var transaction = new TransactionModel
             {
-                Id = Guid.NewGuid(),
-                CardNumber = 65478912365496,
+                CardNumber = 654789123,
                 Amount = 120,
-                Password = "12345",
                 Type = TransactionType.Credit,
-                Number = 4
+                Number = 4,
+                Password = "12345"
             };
 
             ValidationErrorList errorList = new ValidationErrorList();

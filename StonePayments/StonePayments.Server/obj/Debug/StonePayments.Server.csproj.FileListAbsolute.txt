@@ -204,8 +204,6 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\bin\Antlr3.Runtime.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\obj\Debug\StonePayments.Server.csprojAssemblyReference.cache
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\obj\Debug\StonePayments.Server.StonePaymentResource.resources
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\obj\Debug\StonePayments.Server.csproj.GenerateResource.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\obj\Debug\StonePayments.Server.csproj.CoreCompileInputs.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\obj\Debug\StonePayments.Server.csproj.CopyComplete
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\obj\Debug\StonePayments.Server.dll

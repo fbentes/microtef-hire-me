@@ -27,6 +27,10 @@ namespace StonePayments.Server.Repository
 
                 try
                 {
+                        // O cliente informa apenas o CarnNumber, então é necessário buscar a instância
+                        // do Card para setar seu Id para a entidade Transaction e validar a senha do
+                        // cartão se está correta.
+
                         Card card = await (from c in context.Cards
                                            where c.Number == transactionModel.CardNumber
                                            select c).FirstOrDefaultAsync<Card>();
@@ -36,7 +40,7 @@ namespace StonePayments.Server.Repository
                             throw new Exception("O Card não foi encontrado com o número " + transactionModel.CardNumber + " !");
                         }
 
-                        bool hasPassword = (bool)Enum.Parse(typeof(bool), card.HasPassword, true);
+                        bool hasPassword = bool.Parse(card.HasPassword);
 
                         if (hasPassword)
                         {
@@ -44,6 +48,24 @@ namespace StonePayments.Server.Repository
                             {
                                 throw new Exception("A senha do cartão é inválida !");
                             }
+                        }
+    
+                        // Pesquisa o portador do cartão para avaliar seu limite de crédito para a transação.
+
+                        var customer = await (from c in context.Customers
+                                              where c.Id == card.Customer
+                                              select c).FirstOrDefaultAsync<Customer>();
+
+                        if(customer != null)
+                        {
+                            if(customer.CreditLimit < transactionModel.Amount.Value)
+                            {
+                                throw new Exception("O cliente não possui saldo disponível !");
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("O cliente não foi encontrado !");
                         }
 
                         var transaction = new Transaction
@@ -61,6 +83,9 @@ namespace StonePayments.Server.Repository
 
                         trans.Commit();
 
+                        // Após inserir um novo registro de transação, retorna a lista de transações feitas
+                        // para o cliente, evitando assim, mais uma chamada remota para obter essa lista.
+
                         return await GetTransactions();
                 }
                 catch (Exception E)
@@ -72,6 +97,11 @@ namespace StonePayments.Server.Repository
             }
         }
 
+        /// <summary>
+        /// Retorna a lista de transações efetuadas para o cliente. Por enquanto não há parâmetros, mas é
+        /// recomendável setar algum critério para evitar fazer um fullscan da tabela.
+        /// </summary>
+        /// <returns>Lista de objetos Transaction</returns>
         public async Task<List<TransactionModel>> GetTransactions()
         {
             using (var context = new StonePaymentsEntitiesCustom())

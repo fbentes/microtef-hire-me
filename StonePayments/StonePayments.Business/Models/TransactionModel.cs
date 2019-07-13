@@ -6,22 +6,22 @@ namespace StonePayments.Business
 {
     public class TransactionModel: BaseEntity
     {
-        [RequiredValue("O campo CardNumber não pode ser vazio !")]
-        [RangeLengthValues(12, 19, "O campo CardNumber deve estar entre 12 a 19 dígitos !")]
+        [RequiredValue(nameof(StonePaymentResource.CardNumberNotNull))]
+        [RangeLengthValues(12, 19, nameof(StonePaymentResource.CardNumberBetween12_19_Digits))]
         public long? CardNumber { get; set; }
 
         public CardModel Card { get; set; }
 
-        [MinRequiredValue(0.10, "O valor da transação tem que ser no mínimo 10 centavos !")]
+        [MinRequiredValue(0.10, nameof(StonePaymentResource.AmountAtLeastTenCents))]
         public double? Amount { get; set; }
 
         public TransactionType Type { get; set; }
 
-        [MinRequiredValue(1, "O número de parcelas deve ser no mínimo igual 1 !")]
+        [MinRequiredValue(1, nameof(StonePaymentResource.NumberMinValueEqualOne))]
         public byte? Number { get; set; }
 
-        [RequiredValue("O campo Senha não pode ser vazio !")]
-        [RangeLengthValues(4,6, "A senha deve ter entre 4 a 6 dítigos")]
+        [RequiredValue(nameof(StonePaymentResource.PasswordIsNotBeNull))]
+        [RangeLengthValues(4,6, nameof(StonePaymentResource.PasswordBetween4_6_Digits))]
         public string Password { get; set; }
 
         public TransactionModel()
@@ -29,6 +29,10 @@ namespace StonePayments.Business
             Card = new CardModel();
         }
 
+        /// <summary>
+        /// Retorna o tipo de transação (Crédito, Débito) para seleção pelo front-end de envio de 
+        /// Transação.
+        /// </summary>
         public static TransactionType[] TransactionTypeList
         {
             get
