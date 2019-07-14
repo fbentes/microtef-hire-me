@@ -1,8 +1,8 @@
-﻿<Application x:Class="StonePayments.App"
+﻿<Application x:Class="StonePayments.Client.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:StonePayments"
-             StartupUri="Views\SendTransactionWindow.xaml">
+             Startup="Application_Startup">
+    <!-- StartupUri="Views\SendTransactionWindow.xaml"> -->
     <Application.Resources>
          
     </Application.Resources>

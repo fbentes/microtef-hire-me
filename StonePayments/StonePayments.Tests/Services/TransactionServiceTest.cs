@@ -27,7 +27,7 @@ namespace StonePayments.Server.Tests.Services
                 Amount = new Random().NextDouble(),
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1,36),
-                Password = "123456789"
+                Password = "123456"
             };
 
             try
@@ -43,15 +43,15 @@ namespace StonePayments.Server.Tests.Services
         }
 
         [TestMethod]
-        public async Task TestSendTransactionWithFailCardNumber()
+        public async Task TestSendTransactionWithFailCardNumberBetween12_19_Digits()
         {
             var transactionModel = new TransactionModel
             {
-                CardNumber = 123465478932,
+                CardNumber = 12346547893,
                 Amount = new Random().NextDouble(),
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1, 36),
-                Password = "123456789"
+                Password = "123456"
             };
 
             try
@@ -60,9 +60,57 @@ namespace StonePayments.Server.Tests.Services
 
                 Assert.IsTrue(true);
             }
-            catch (SendTransactionException)
+            catch (SendTransactionException E)
             {
-                Assert.IsFalse(true);
+                Assert.IsTrue(E.Message.Contains(StonePaymentResource.CardNumberBetween12_19_Digits));
+            }
+        }
+
+        [TestMethod]
+        public async Task TestSendTransactionWithFailCardNumberNotNull()
+        {
+            var transactionModel = new TransactionModel
+            {
+                CardNumber = null,
+                Amount = new Random().NextDouble(),
+                Type = TransactionType.Credit,
+                Number = (byte)new Random().Next(1, 36),
+                Password = "123456"
+            };
+
+            try
+            {
+                List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
+
+                Assert.IsTrue(true);
+            }
+            catch (SendTransactionException E)
+            {
+                Assert.IsTrue(E.Message.Contains(StonePaymentResource.CardNumberNotNull));
+            }
+        }
+
+        [TestMethod]
+        public async Task TestSendTransactionWithFailAmountAtLeastTenCents()
+        {
+            var transactionModel = new TransactionModel
+            {
+                CardNumber = 1234654789324,
+                Amount = 0.09,
+                Type = TransactionType.Credit,
+                Number = (byte)new Random().Next(1, 36),
+                Password = "123456"
+            };
+
+            try
+            {
+                List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
+
+                Assert.IsTrue(true);
+            }
+            catch (SendTransactionException E)
+            {
+                Assert.IsTrue(E.Message.Contains(StonePaymentResource.AmountAtLeastTenCents));
             }
         }
 

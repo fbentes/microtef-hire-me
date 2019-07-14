@@ -21,7 +21,7 @@ namespace StonePayments.Server.Services
 
             if(!isValid)
             {
-                throw new Exception(errorList.ToString());
+                throw new SendTransactionException(errorList.ToString());
             }
 
             return await TransactionRepository.SendTransaction(transactionModel);

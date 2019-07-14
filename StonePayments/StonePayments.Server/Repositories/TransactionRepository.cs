@@ -37,7 +37,7 @@ namespace StonePayments.Server.Repository
 
                         if(card == null)
                         {
-                            throw new Exception("O Card não foi encontrado com o número " + transactionModel.CardNumber + " !");
+                            throw new SendTransactionException(StonePaymentResource.CardNotFound);
                         }
 
                         bool hasPassword = bool.Parse(card.HasPassword);
@@ -46,7 +46,7 @@ namespace StonePayments.Server.Repository
                         {
                             if (card.Password.Trim().ToLower() != transactionModel.Password.Trim().ToLower())
                             {
-                                throw new Exception("A senha do cartão é inválida !");
+                                throw new SendTransactionException(StonePaymentResource.PasswordInvalid);
                             }
                         }
     
@@ -60,12 +60,12 @@ namespace StonePayments.Server.Repository
                         {
                             if(customer.CreditLimit < transactionModel.Amount.Value)
                             {
-                                throw new Exception("O cliente não possui saldo disponível !");
+                                throw new SendTransactionException(StonePaymentResource.CustomerHasNoAvailableBalance);
                             }
                         }
                         else
                         {
-                            throw new Exception("O cliente não foi encontrado !");
+                            throw new SendTransactionException(StonePaymentResource.CustomerNotFound);
                         }
 
                         var transaction = new Transaction
@@ -88,11 +88,11 @@ namespace StonePayments.Server.Repository
 
                         return await GetTransactions();
                 }
-                catch (Exception E)
+                catch (Exception)
                 {
                     trans.Rollback();
 
-                    throw new SendTransactionException(StonePaymentResource.SendTransactionError, E.Message);
+                    throw new SendTransactionException(StonePaymentResource.SendTransactionError);
                 }
             }
         }

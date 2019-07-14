@@ -7,7 +7,7 @@ namespace StonePayments.Util
 {
     public static class ValidationProperties
     {
-        public static bool IsValid(BaseEntity entity, out ValidationErrorList errorList)
+        public static bool IsValid(IBaseEntity entity, out ValidationErrorList errorList)
         {
             errorList = new ValidationErrorList();
 
@@ -38,7 +38,7 @@ namespace StonePayments.Util
 
                             if (v < range.MinValue)
                             {
-                                errorList.Add("O campo " + propInfo.Name + " tem que ter valor mínimo = " + range.MinValue + "!");
+                                errorList.Add("O campo " + propInfo.Name + " deve ser no mínimo igual a " + range.MinValue + " !");
                             }
                         }
                         else if (baseValidatorAttribute is RangeLengthValuesAttribute)
@@ -49,7 +49,7 @@ namespace StonePayments.Util
                                 value.ToString().Trim().Length < range.MinLengthValue ||
                                 value.ToString().Trim().Length > range.MaxLengthValue)
                             {
-                                errorList.Add("O campo " + propInfo.Name + " deve conter de " + range.MinLengthValue + " a " + range.MaxLengthValue + " dígitos !");
+                                errorList.Add("O campo " + propInfo.Name + " deve conter entre " + range.MinLengthValue + " a " + range.MaxLengthValue + " dígitos !");
                             }
                         }
                     }

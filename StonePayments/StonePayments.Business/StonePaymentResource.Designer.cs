@@ -36,7 +36,7 @@ namespace StonePayments.Business {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("StonePayments.Business.StonePaymentResource", typeof(StonePaymentResource).Assembly);
@@ -51,7 +51,7 @@ namespace StonePayments.Business {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,59 +61,95 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O valor da transação tem que ser no mínimo 10 centavos !.
+        ///   Looks up a localized string similar to O campo Amount deve ser no mínimo igual a 0.1 !.
         /// </summary>
         public static string AmountAtLeastTenCents {
             get {
                 return ResourceManager.GetString("AmountAtLeastTenCents", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to O campo CardNumber deve estar entre 12 a 19 dígitos !.
+        ///   Looks up a localized string similar to O Card não foi encontrado !.
+        /// </summary>
+        public static string CardNotFound {
+            get {
+                return ResourceManager.GetString("CardNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo CardNumber deve conter entre 12 a 19 dígitos !.
         /// </summary>
         public static string CardNumberBetween12_19_Digits {
             get {
                 return ResourceManager.GetString("CardNumberBetween12_19_Digits", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to O campo CardNumber não pode ser vazio !.
+        ///   Looks up a localized string similar to O campo CardNumber não pode ser nulo !.
         /// </summary>
         public static string CardNumberNotNull {
             get {
                 return ResourceManager.GetString("CardNumberNotNull", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to O número de parcelas deve ser no mínimo igual 1 !.
+        ///   Looks up a localized string similar to O cliente não possui saldo disponível !.
+        /// </summary>
+        public static string CustomerHasNoAvailableBalance {
+            get {
+                return ResourceManager.GetString("CustomerHasNoAvailableBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O cliente não foi encontrado !.
+        /// </summary>
+        public static string CustomerNotFound {
+            get {
+                return ResourceManager.GetString("CustomerNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo Number deve ser no mínimo igual a 1 !.
         /// </summary>
         public static string NumberMinValueEqualOne {
             get {
                 return ResourceManager.GetString("NumberMinValueEqualOne", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to A senha deve ter entre 4 a 6 dítigos !.
+        ///   Looks up a localized string similar to O campo Password deve conter entre 4 a 6 dítigos !.
         /// </summary>
         public static string PasswordBetween4_6_Digits {
             get {
                 return ResourceManager.GetString("PasswordBetween4_6_Digits", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to O campo Senha não pode ser vazio !.
+        ///   Looks up a localized string similar to A senha do cartão é inválida !.
+        /// </summary>
+        public static string PasswordInvalid {
+            get {
+                return ResourceManager.GetString("PasswordInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo Senha não pode ser nulo !.
         /// </summary>
         public static string PasswordIsNotBeNull {
             get {
                 return ResourceManager.GetString("PasswordIsNotBeNull", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Falha ao enviar transação do cliente para o servidor !.
         /// </summary>
@@ -122,7 +158,7 @@ namespace StonePayments.Business {
                 return ResourceManager.GetString("SendTransactionError", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Transação enviada com sucesso !.
         /// </summary>

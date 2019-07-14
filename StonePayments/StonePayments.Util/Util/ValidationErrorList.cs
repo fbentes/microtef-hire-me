@@ -4,6 +4,10 @@ using System.Text;
 
 namespace StonePayments.Util
 {
+    /// <summary>
+    /// Lista com o par <Propriedade, Mensagem> de mensagens invalidadas pela classe ValidationProperties para 
+    /// cada propriedade.
+    /// </summary>
     public class ValidationErrorList: List<string>
     {
         public override string ToString()

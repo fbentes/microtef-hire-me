@@ -4,7 +4,7 @@ using System;
 
 namespace StonePayments.Business
 {
-    public class TransactionModel: BaseEntity
+    public class TransactionModel: BaseEntity, ITransactionModel
     {
         [RequiredValue(nameof(StonePaymentResource.CardNumberNotNull))]
         [RangeLengthValues(12, 19, nameof(StonePaymentResource.CardNumberBetween12_19_Digits))]
@@ -33,7 +33,7 @@ namespace StonePayments.Business
         /// Retorna o tipo de transação (Crédito, Débito) para seleção pelo front-end de envio de 
         /// Transação.
         /// </summary>
-        public static TransactionType[] TransactionTypeList
+        public TransactionType[] TransactionTypeList
         {
             get
             {

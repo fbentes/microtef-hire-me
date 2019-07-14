@@ -6,62 +6,62 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePaymentsServer\bin\Release\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Server\bin\Release\Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>07/02/2019 17:58:21</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
-      <publishTime>07/02/2019 17:58:20</publishTime>
+      <publishTime>07/11/2019 22:46:06</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
-      <publishTime>07/02/2019 17:58:20</publishTime>
+      <publishTime>07/11/2019 22:44:02</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
-      <publishTime>07/02/2019 17:58:20</publishTime>
+      <publishTime>07/11/2019 22:44:12</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
-      <publishTime>07/02/2019 17:58:20</publishTime>
+      <publishTime>07/11/2019 22:44:17</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:44:23</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:44:29</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:44:40</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:44:47</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:44:54</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:45:02</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:45:11</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:45:25</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
       <publishTime>07/02/2019 17:58:19</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:45:49</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:45:56</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:46:15</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
-      <publishTime>07/02/2019 17:58:19</publishTime>
+      <publishTime>07/11/2019 22:46:24</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
       <publishTime>07/02/2019 17:58:19</publishTime>
@@ -264,6 +264,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
+    <File Include="bin/StonePayments.Business.dll">
+      <publishTime>07/13/2019 21:17:17</publishTime>
+    </File>
+    <File Include="bin/StonePayments.Business.pdb">
+      <publishTime>07/13/2019 21:17:17</publishTime>
+    </File>
+    <File Include="bin/StonePayments.Server.dll">
+      <publishTime>07/13/2019 21:17:18</publishTime>
+    </File>
+    <File Include="bin/StonePayments.Server.pdb">
+      <publishTime>07/13/2019 21:17:18</publishTime>
+    </File>
+    <File Include="bin/StonePayments.Util.dll">
+      <publishTime>07/13/2019 20:50:17</publishTime>
+    </File>
+    <File Include="bin/StonePayments.Util.pdb">
+      <publishTime>07/13/2019 20:50:17</publishTime>
+    </File>
     <File Include="bin/StonePaymentsBusiness.dll">
       <publishTime>07/11/2019 13:26:05</publishTime>
     </File>
@@ -358,7 +376,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2019 17:58:15</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>07/02/2019 17:58:12</publishTime>
+      <publishTime>07/11/2019 22:30:29</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>07/02/2019 17:58:15</publishTime>
@@ -400,13 +418,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2019 17:58:12</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>07/02/2019 17:58:12</publishTime>
+      <publishTime>07/12/2019 12:07:10</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>07/02/2019 17:58:12</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/09/2019 22:35:16</publishTime>
+      <publishTime>07/13/2019 20:50:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

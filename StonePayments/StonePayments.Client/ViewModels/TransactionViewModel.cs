@@ -1,15 +1,17 @@
-﻿using StonePayments.Business;
+﻿using LightInject;
+using StonePayments.Business;
 using System.ComponentModel;
 
 namespace StonePayments.Client.ViewModels
 {
-    public class TransactionViewModel : INotifyPropertyChanged
+    public class TransactionViewModel : INotifyPropertyChanged, ITransactionViewModel
     {
-        public TransactionModel TransactionModel;
+        [Inject]
+        public ITransactionModel TransactionModel { get; set; }
 
         public TransactionViewModel()
         {
-            TransactionModel = new TransactionModel();
+            //TransactionModel = new TransactionModel();
         }
 
         public SendTransactionCommand SendTransactionCommand
@@ -23,12 +25,12 @@ namespace StonePayments.Client.ViewModels
 
         public long? CardNumber
         {
-            get { return TransactionModel.Card.Number; }
+            get { return TransactionModel.CardNumber; }
             set
             {
-                if(TransactionModel.Card.Number != value)
+                if(TransactionModel.CardNumber != value)
                 {
-                    TransactionModel.Card.Number = value;
+                    TransactionModel.CardNumber = value;
 
                     OnPropertyChange("CardNumber");
                 }
@@ -78,6 +80,20 @@ namespace StonePayments.Client.ViewModels
                     TransactionModel.Number = value;
 
                     OnPropertyChange("Number");
+                }
+            }
+        }
+
+        public string Password  // Número de parcelas
+        {
+            get { return TransactionModel.Password; }
+            set
+            {
+                if (TransactionModel.Password != value)
+                {
+                    TransactionModel.Password = value;
+
+                    OnPropertyChange("Password");
                 }
             }
         }

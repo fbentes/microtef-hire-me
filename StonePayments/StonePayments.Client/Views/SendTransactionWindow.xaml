@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StonePayments.Client.Views"
         mc:Ignorable="d"
-        Title="SendTransactionWindow" Height="450" Width="800">
+        Title="Transação" Height="450" Width="399.87" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -33,7 +34,11 @@
 
         <Label Grid.Column="0" Grid.Row="4" Margin="4" Content="Number:" HorizontalAlignment="Right"/>
         <TextBox Grid.Column="1" Grid.Row="4" Margin="4" Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
-        <Button Content="Enviar transação" Grid.Column="1" HorizontalAlignment="Center" Margin="4" Grid.Row="5" VerticalAlignment="Top" Width="105" Command="{Binding SendTransactionCommand}"/>
+
+        <Label Grid.Column="0" Grid.Row="5" Margin="4" Content="Number:" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Margin="4" Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
+
+        <Button Content="Enviar transação" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Margin="4" VerticalAlignment="Top" Width="105" Command="{Binding SendTransactionCommand}"/>
 
     </Grid>
 </Window>

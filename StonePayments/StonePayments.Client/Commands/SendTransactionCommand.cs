@@ -4,6 +4,10 @@ using System.Windows;
 using StonePayments.Util;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Collections.Generic;
+using StonePayments.Business;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace StonePayments.Client.ViewModels
 {
@@ -42,7 +46,7 @@ namespace StonePayments.Client.ViewModels
                     return;
                 }
 
-                var response = client.PostAsJsonAsync("stone/SendTransaction", 
+                var response = client.PostAsJsonAsync("stone/sendTransaction", 
                                                       transactionViewModel.TransactionModel).Result;
 
                 if (response.IsSuccessStatusCode)
@@ -52,6 +56,11 @@ namespace StonePayments.Client.ViewModels
                     readTask.Wait();
 
                     var message = readTask.Result;
+
+                    //var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" };
+                    //var list = JsonConvert.DeserializeObject<List<TransactionModel>>(message, dateTimeConverter);
+
+                    var list = JsonConvert.DeserializeObject<List<TransactionModel>>(message);
 
                     MessageBox.Show(message);
                 }

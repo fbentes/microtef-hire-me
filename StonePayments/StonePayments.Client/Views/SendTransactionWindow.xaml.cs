@@ -1,24 +1,29 @@
-﻿using StonePayments.Client.ViewModels;
+﻿using LightInject;
+using StonePayments.Client.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace StonePayments.Client.Views
 {
-    public partial class SendTransactionWindow : Window
+    public partial class SendTransactionWindow : Window, ISendTransactionWindow
     {
-        private readonly TransactionViewModel transactionViewModel;
+        [Inject]
+        public ITransactionViewModel TransactionViewModel { get; set; }
 
         public SendTransactionWindow()
         {
             InitializeComponent();
 
-            transactionViewModel = new TransactionViewModel();
+            //transactionViewModel = new TransactionViewModel();
 
-            DataContext = transactionViewModel;
+            //DataContext = TransactionViewModel;
+        }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+
+            DataContext = TransactionViewModel;
         }
     }
 }

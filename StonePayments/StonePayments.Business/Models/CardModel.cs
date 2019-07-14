@@ -1,4 +1,5 @@
-﻿using StonePayments.Util;
+﻿using Newtonsoft.Json;
+using StonePayments.Util;
 
 namespace StonePayments.Business
 {
@@ -6,6 +7,8 @@ namespace StonePayments.Business
     {
         public CustomerModel Customer { get; set; }
         public long? Number { get; set; }
+
+        [JsonConverter(typeof(CustomDateTimeConverter))]
         public System.DateTime? ExpirationDate { get; set; }
         public CardBrand CardBrand { get; set; }
         public string Password { get; set; }
