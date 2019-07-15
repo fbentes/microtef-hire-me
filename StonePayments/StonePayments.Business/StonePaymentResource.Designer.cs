@@ -151,6 +151,24 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resultado.
+        /// </summary>
+        public static string ResultTitle {
+            get {
+                return ResourceManager.GetString("ResultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviando dados da transação para o servidor, aguarde ....
+        /// </summary>
+        public static string SendingTransactionToServer {
+            get {
+                return ResourceManager.GetString("SendingTransactionToServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Falha ao enviar transação do cliente para o servidor !.
         /// </summary>
         public static string SendTransactionError {
@@ -165,6 +183,15 @@ namespace StonePayments.Business {
         public static string TransactionSendOk {
             get {
                 return ResourceManager.GetString("TransactionSendOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validação.
+        /// </summary>
+        public static string ValidationTitle {
+            get {
+                return ResourceManager.GetString("ValidationTitle", resourceCulture);
             }
         }
     }

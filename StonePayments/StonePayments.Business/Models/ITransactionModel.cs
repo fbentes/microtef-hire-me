@@ -28,5 +28,7 @@ namespace StonePayments.Business
         /// Transação.
         /// </summary>
         TransactionType[] TransactionTypeList { get; }
+
+        string CustomerName { get; }
     }
 }

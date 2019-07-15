@@ -8,6 +8,6 @@ namespace StonePayments.Server.Services
     {
         Task<List<TransactionModel>> SendTransaction(TransactionModel transactionModel);
 
-        Task<List<TransactionModel>> GetTransactions();
+        Task<List<TransactionModel>> GetTransactions(long? cardNumber = null);
     }
 }

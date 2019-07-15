@@ -8,6 +8,7 @@ namespace StonePayments.Server.Controllers
     public interface ITransactionController
     {
         Task<IHttpActionResult> GetTransactions();
+        Task<IHttpActionResult> GetTransactions(long cardNumber);
 
         Task<IHttpActionResult> SendTransaction([FromBody]TransactionModel json);
     }

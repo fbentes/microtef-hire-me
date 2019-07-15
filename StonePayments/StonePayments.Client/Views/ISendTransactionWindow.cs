@@ -4,7 +4,7 @@ namespace StonePayments.Client.Views
 {
     internal interface ISendTransactionWindow
     {
-        ITransactionViewModel TransactionViewModel { get; set; }
+        ISendTransactionViewModel SendTransactionViewModel { get; set; }
         void Show();
     }
 }

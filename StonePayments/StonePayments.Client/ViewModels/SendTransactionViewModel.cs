@@ -1,23 +1,43 @@
 ﻿using LightInject;
 using StonePayments.Business;
+using StonePayments.Client.Commands;
+using StonePayments.Client.Util;
+using StonePayments.Client.Views;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace StonePayments.Client.ViewModels
 {
-    public class TransactionViewModel : INotifyPropertyChanged, ITransactionViewModel
+    public class SendTransactionViewModel : INotifyPropertyChanged, ISendTransactionViewModel
     {
         [Inject]
         public ITransactionModel TransactionModel { get; set; }
 
-        public TransactionViewModel()
-        {
-            //TransactionModel = new TransactionModel();
-        }
+        private ObservableCollection<TransactionModel> transactionModelList;
+
+        public IViewObservable ViewObservable { get; set; }
 
         public SendTransactionCommand SendTransactionCommand
         { get
             {
                 return new SendTransactionCommand(this);
+            }
+        }
+
+        public CloseApplicationCommand CloseApplicationCommand
+        {
+            get
+            {
+                return new CloseApplicationCommand(this);
+            }
+        }
+
+        public GetTransactionsCommand GetTransactionsCommand
+        {
+            get
+            {
+                return new GetTransactionsCommand(new GetTransactionsViewModel());
             }
         }
 
@@ -95,6 +115,27 @@ namespace StonePayments.Client.ViewModels
 
                     OnPropertyChange("Password");
                 }
+            }
+        }
+
+        public ObservableCollection<TransactionModel> TransactionModelList
+        {
+            get
+            {
+               return transactionModelList;
+            }
+            set
+            {
+                if(value == null)
+                {
+                    transactionModelList = new ObservableCollection<TransactionModel>();
+                }
+                else
+                {
+                    transactionModelList = value;
+                }
+
+                OnPropertyChange("TransactionModelList");
             }
         }
 

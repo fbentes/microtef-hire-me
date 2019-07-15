@@ -15,11 +15,20 @@ using System.Windows.Shapes;
 namespace StonePayments.Client.Views
 {
     /// <summary>
-    /// Interaction logic for GetTransactions.xaml
+    /// Interaction logic for MessageWaitingProcess.xaml
     /// </summary>
-    public partial class GetTransactions : Window
+    public partial class MessageWaitingProcessWindow : Window
     {
-        public GetTransactions()
+        public string Message
+        {
+            set
+            {
+                txtMessage.Text = value;
+            }
+
+        }
+
+        public MessageWaitingProcessWindow()
         {
             InitializeComponent();
         }

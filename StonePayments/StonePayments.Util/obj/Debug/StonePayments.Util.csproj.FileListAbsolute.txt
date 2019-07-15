@@ -209,4 +209,3 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Util\obj\Debug\StonePayments.Util.csproj.CopyComplete
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Util\obj\Debug\StonePayments.Util.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Util\obj\Debug\StonePayments.Util.pdb
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Util\obj\Debug\StonePayments.Util.csprojAssemblyReference.cache

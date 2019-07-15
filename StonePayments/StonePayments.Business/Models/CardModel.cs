@@ -14,5 +14,10 @@ namespace StonePayments.Business
         public string Password { get; set; }
         public CardType Type { get; set; }
         public bool? HasPassword { get; set; }
+
+        public override string ToString()
+        {
+            return Number?.ToString();
+        }
     }
 }

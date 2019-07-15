@@ -24,6 +24,14 @@ namespace StonePayments.Business
         [RangeLengthValues(4,6, nameof(StonePaymentResource.PasswordBetween4_6_Digits))]
         public string Password { get; set; }
 
+        public string CustomerName
+        {
+            get
+            {
+                return Card?.Customer?.Name;
+            }
+        }
+
         public TransactionModel()
         {
             Card = new CardModel();
@@ -40,5 +48,6 @@ namespace StonePayments.Business
                 return (TransactionType[])Enum.GetValues(typeof(TransactionType));
             }
         }
+
     }
 }

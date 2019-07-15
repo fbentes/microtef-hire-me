@@ -13,36 +13,21 @@ namespace StonePayments.Client
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            base.OnStartup(e);
+        }
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
             var container = new ServiceContainer();
 
             container.EnableAnnotatedPropertyInjection();
 
             container.Register<ITransactionModel, TransactionModel>();
-            container.Register<ITransactionViewModel, TransactionViewModel>();
+            container.Register<ISendTransactionViewModel, SendTransactionViewModel>();
             container.Register<ISendTransactionWindow, SendTransactionWindow>();
 
             ISendTransactionWindow sendTransactionWindow = container.GetInstance<ISendTransactionWindow>();
             sendTransactionWindow.Show();
         }
-
-        private void Application_Startup(object sender, StartupEventArgs e)
-        {
-
-        }
-
-        /*
-        private void Application_Startup(object sender, StartupEventArgs e)
-        {
-            var container = new ServiceContainer();
-
-            container.EnableAnnotatedPropertyInjection();
-
-            container.Register<ITransactionModel, TransactionModel>();
-            container.Register<ITransactionViewModel, TransactionViewModel>();
-
-            SendTransactionWindow sendTransactionWindow = container.GetInstance<SendTransactionWindow>();
-            sendTransactionWindow.Show();
-        }
-        */
     }
 }

@@ -62,6 +62,8 @@ namespace StonePayments.Server.Repository
                             {
                                 throw new SendTransactionException(StonePaymentResource.CustomerHasNoAvailableBalance);
                             }
+
+                            customer.CreditLimit -= transactionModel.Amount.Value;
                         }
                         else
                         {
@@ -86,29 +88,30 @@ namespace StonePayments.Server.Repository
                         // Após inserir um novo registro de transação, retorna a lista de transações feitas
                         // para o cliente, evitando assim, mais uma chamada remota para obter essa lista.
 
-                        return await GetTransactions();
+                        return await GetTransactions(transactionModel.CardNumber);
                 }
-                catch (Exception)
+                catch (Exception E)
                 {
                     trans.Rollback();
 
-                    throw new SendTransactionException(StonePaymentResource.SendTransactionError);
+                    throw new SendTransactionException(E.Message);
                 }
             }
         }
 
         /// <summary>
-        /// Retorna a lista de transações efetuadas para o cliente. Por enquanto não há parâmetros, mas é
-        /// recomendável setar algum critério para evitar fazer um fullscan da tabela.
+        /// Retorna a lista de transações efetuadas para o cliente ou todas as transações.
         /// </summary>
         /// <returns>Lista de objetos Transaction</returns>
-        public async Task<List<TransactionModel>> GetTransactions()
+        public async Task<List<TransactionModel>> GetTransactions(long? cardNumber = null)
         {
             using (var context = new StonePaymentsEntitiesCustom())
             {
                 var results =  ( from t in 
                                       await (
                                          from t0 in context.Transactions
+                                         where cardNumber != null && t0.Card1.Number == cardNumber ||
+                                               cardNumber == null
                                          orderby t0.Card1.Number
                                          select t0
                                        ).ToListAsync<Transaction>()
@@ -125,7 +128,7 @@ namespace StonePayments.Server.Repository
                                              Customer = new CustomerModel
                                              {
                                                  Id = t.Card1.Customer1.Id,
-                                                 Nome = t.Card1.Customer1.Nome,
+                                                 Name = t.Card1.Customer1.Nome,
                                                  CreditLimit = t.Card1.Customer1.CreditLimit
                                              },
                                              ExpirationDate = t.Card1.ExpirationDate,

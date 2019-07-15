@@ -15,6 +15,8 @@ namespace StonePayments.Server.Services
 
         public async Task<List<TransactionModel>> SendTransaction(TransactionModel transactionModel)
         {
+            // Caso outro cliente não valide o objeto, o servidor garante a integridade do objeto 
+            // antes de enviá-lo para o banco de dados.
             ValidationErrorList errorList = new ValidationErrorList();
 
             bool isValid = ValidationProperties.IsValid(transactionModel, out errorList);
@@ -27,9 +29,9 @@ namespace StonePayments.Server.Services
             return await TransactionRepository.SendTransaction(transactionModel);
         }
 
-        public async Task<List<TransactionModel>> GetTransactions()
+        public async Task<List<TransactionModel>> GetTransactions(long? cardNumber = null)
         {
-            return await TransactionRepository.GetTransactions();
+            return await TransactionRepository.GetTransactions(cardNumber);
         }
     }
 }

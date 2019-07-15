@@ -11,6 +11,6 @@ namespace StonePayments.Server.Repository
     {
         Task<List<TransactionModel>> SendTransaction(TransactionModel transactionModel);
 
-        Task<List<TransactionModel>> GetTransactions();
+        Task<List<TransactionModel>> GetTransactions(long? cardNumber = null);
     }
 }

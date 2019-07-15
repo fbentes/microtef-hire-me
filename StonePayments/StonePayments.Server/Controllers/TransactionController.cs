@@ -13,11 +13,21 @@ namespace StonePayments.Server.Controllers
         [Inject]
         public ITransactionService TransactionService { get; set; }
 
+
         [HttpGet]
         [Route("stone/transactions")]
         public async Task<IHttpActionResult> GetTransactions()
         {
             var transactions = await TransactionService.GetTransactions();
+
+            return Ok<List<TransactionModel>>(transactions);
+        }
+
+        [HttpGet]
+        [Route("stone/transactions/{cardNumber}")]
+        public async Task<IHttpActionResult> GetTransactions(long cardNumber)
+        {
+            var transactions = await TransactionService.GetTransactions(cardNumber);
 
             return Ok<List<TransactionModel>>(transactions);
         }

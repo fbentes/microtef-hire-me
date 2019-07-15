@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using StonePayments.Business;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json.Linq;
 
 namespace StonePayments.Client.ViewModels
 {
@@ -15,11 +17,11 @@ namespace StonePayments.Client.ViewModels
     {
         public event EventHandler CanExecuteChanged;
 
-        private readonly TransactionViewModel transactionViewModel;
+        private readonly ISendTransactionViewModel sendTransactionViewModel;
 
-        public SendTransactionCommand(TransactionViewModel transactionViewModel)
+        public SendTransactionCommand(ISendTransactionViewModel sendTransactionViewModel)
         {
-            this.transactionViewModel = transactionViewModel;
+            this.sendTransactionViewModel = sendTransactionViewModel;
         }
 
         public bool CanExecute(object parameter)
@@ -31,23 +33,13 @@ namespace StonePayments.Client.ViewModels
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.0.11:9090/");
+                client.BaseAddress = new Uri(StonePaymentServerResource.Server);
 
                 client.DefaultRequestHeaders.Accept.Add(
                         new MediaTypeWithQualityHeaderValue("application/json"));
 
-                ValidationErrorList errorList;
-
-                bool isValid = ValidationProperties.IsValid(transactionViewModel.TransactionModel, out errorList);
-
-                if (!isValid)
-                {
-                    MessageBox.Show(errorList.ToString());
-                    return;
-                }
-
                 var response = client.PostAsJsonAsync("stone/sendTransaction", 
-                                                      transactionViewModel.TransactionModel).Result;
+                                                      sendTransactionViewModel.TransactionModel).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -55,26 +47,62 @@ namespace StonePayments.Client.ViewModels
                     var readTask = response.Content.ReadAsStringAsync();
                     readTask.Wait();
 
-                    var message = readTask.Result;
+                    var result = readTask.Result;
 
-                    //var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" };
-                    //var list = JsonConvert.DeserializeObject<List<TransactionModel>>(message, dateTimeConverter);
+                    if(result.StartsWith("{") && result.EndsWith("}") || 
+                       result.StartsWith("[") && result.EndsWith("]"))
+                    {
+                        sendTransactionViewModel.TransactionModelList =
+                            JsonConvert.DeserializeObject<ObservableCollection<TransactionModel>>(result);
 
-                    var list = JsonConvert.DeserializeObject<List<TransactionModel>>(message);
-
-                    MessageBox.Show(message);
+                        sendTransactionViewModel.ViewObservable.SendResultMessage(
+                            StonePaymentResource.TransactionSendOk, StonePaymentResource.ResultTitle);
+                    }
+                    else
+                    {
+                        sendTransactionViewModel.ViewObservable.SendResultMessage(
+                            result.Replace("\"",""), StonePaymentResource.ResultTitle);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
+                    sendTransactionViewModel.ViewObservable.SendResultMessage("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
                 }
             }
         }
 
+        private bool isValidProperties()
+        {
+            ValidationErrorList errorList;
+
+            bool isValid = ValidationProperties.IsValid(sendTransactionViewModel.TransactionModel, out errorList);
+
+            if (!isValid)
+            {
+                MessageBox.Show(errorList.ToString(), StonePaymentResource.ValidationTitle);
+                return false;
+            }
+
+            return true;
+        }
+
         public void Execute(object parameter)
         {
-            SendTransaction();
-            //SendTransaction().GetAwaiter().GetResult();
+            if(!isValidProperties())
+            {
+                return;
+            }
+
+            try
+            {
+                sendTransactionViewModel.ViewObservable.StartProcess();
+
+                SendTransaction();
+            }
+            finally
+            {
+                sendTransactionViewModel.ViewObservable.EndProcess();
+            }
         }
     }
 }
