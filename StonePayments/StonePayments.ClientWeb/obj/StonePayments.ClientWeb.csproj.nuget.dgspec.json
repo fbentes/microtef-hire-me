@@ -1,0 +1,165 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.ClientWeb\\StonePayments.ClientWeb.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Business\\StonePayments.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Business\\StonePayments.Business.csproj",
+        "projectName": "StonePayments.Business",
+        "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Business\\StonePayments.Business.csproj",
+        "packagesPath": "C:\\Users\\fbent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fbent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj": {
+                "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "LightInject": {
+              "target": "Package",
+              "version": "[5.5.0, )"
+            },
+            "LightInject.Annotation": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.ClientWeb\\StonePayments.ClientWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.ClientWeb\\StonePayments.ClientWeb.csproj",
+        "projectName": "StonePayments.ClientWeb",
+        "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.ClientWeb\\StonePayments.ClientWeb.csproj",
+        "packagesPath": "C:\\Users\\fbent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.ClientWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fbent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Business\\StonePayments.Business.csproj": {
+                "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Business\\StonePayments.Business.csproj"
+              },
+              "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj": {
+                "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj",
+        "projectName": "StonePayments.Util",
+        "projectPath": "C:\\Users\\fbent\\Documents\\GitHub\\StonePayments\\microtef-hire-me\\StonePayments\\StonePayments.Util\\StonePayments.Util.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

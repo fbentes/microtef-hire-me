@@ -1,4 +1,6 @@
-﻿namespace StonePayments.Util.Attributes
+﻿using System;
+
+namespace StonePayments.Util.Attributes
 {
 
     /// <summary>
@@ -6,6 +8,8 @@
     /// valores MinLengthValue e MaxLengthValue.. Se for um valor que precisa ser descriptografado para ser validado,
     /// então IsDecryptValue deve ser true;
     /// </summary>
+
+    [AttributeUsage(AttributeTargets.Property)]
     public class RangeLengthValuesAttribute: BaseValidatorAttribute
     {
         public bool IsDecryptValue { get; set; } = false;

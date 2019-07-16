@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "LightInject/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/LightInject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LightInject.dll": {}
+        }
+      },
+      "LightInject.Annotation/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "LightInject": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LightInject.Annotation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LightInject.Annotation.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -35,6 +59,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
       "StonePayments.Util/1.0.0": {
         "type": "project",
         "compile": {
@@ -47,6 +80,65 @@
     }
   },
   "libraries": {
+    "LightInject/5.5.0": {
+      "sha512": "Az0YTUmcZy8Dtq86uizwGHli9VjzjJ9ORp6pbFiIB9cAWrzbiMtRXnqSMLpagu4vpJqtEVOjYaxTUvMPYclJIg==",
+      "type": "package",
+      "path": "lightinject/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/LightInject.dll",
+        "lib/net452/LightInject.pdb",
+        "lib/net452/LightInject.xml",
+        "lib/net46/LightInject.dll",
+        "lib/net46/LightInject.pdb",
+        "lib/net46/LightInject.xml",
+        "lib/netcoreapp2.0/LightInject.dll",
+        "lib/netcoreapp2.0/LightInject.pdb",
+        "lib/netcoreapp2.0/LightInject.xml",
+        "lib/netstandard1.1/LightInject.dll",
+        "lib/netstandard1.1/LightInject.pdb",
+        "lib/netstandard1.1/LightInject.xml",
+        "lib/netstandard1.3/LightInject.dll",
+        "lib/netstandard1.3/LightInject.pdb",
+        "lib/netstandard1.3/LightInject.xml",
+        "lib/netstandard1.6/LightInject.dll",
+        "lib/netstandard1.6/LightInject.pdb",
+        "lib/netstandard1.6/LightInject.xml",
+        "lib/netstandard2.0/LightInject.dll",
+        "lib/netstandard2.0/LightInject.pdb",
+        "lib/netstandard2.0/LightInject.xml",
+        "lightinject.5.5.0.nupkg.sha512",
+        "lightinject.nuspec"
+      ]
+    },
+    "LightInject.Annotation/1.1.0": {
+      "sha512": "sZZpnoBRo20Ul5i8Vn8NIjIpTqhzPCwcghhQ5R36iJobmEyPjIy3qiTSVL24Ax+6aYdz/v7Vz4m/35qCVjSk3w==",
+      "type": "package",
+      "path": "lightinject.annotation/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Xamarin.iOS/LightInject.Annotation.dll",
+        "lib/Xamarin.iOS/LightInject.Annotation.pdb",
+        "lib/monoandroid/LightInject.Annotation.dll",
+        "lib/monoandroid/LightInject.Annotation.pdb",
+        "lib/monotouch/LightInject.Annotation.dll",
+        "lib/monotouch/LightInject.Annotation.pdb",
+        "lib/net45/LightInject.Annotation.dll",
+        "lib/net45/LightInject.Annotation.pdb",
+        "lib/net46/LightInject.Annotation.dll",
+        "lib/net46/LightInject.Annotation.pdb",
+        "lib/netstandard1.1/LightInject.Annotation.dll",
+        "lib/netstandard1.1/LightInject.Annotation.pdb",
+        "lib/netstandard1.3/LightInject.Annotation.dll",
+        "lib/netstandard1.3/LightInject.Annotation.pdb",
+        "lib/portable-net45+netcore45+wpa81/LightInject.Annotation.dll",
+        "lib/portable-net45+netcore45+wpa81/LightInject.Annotation.pdb",
+        "lightinject.annotation.1.1.0.nupkg.sha512",
+        "lightinject.annotation.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -220,6 +312,50 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "StonePayments.Util/1.0.0": {
       "type": "project",
       "path": "../StonePayments.Util/StonePayments.Util.csproj",
@@ -228,6 +364,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "LightInject >= 5.5.0",
+      "LightInject.Annotation >= 1.1.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.2",
       "StonePayments.Util >= 1.0.0"
@@ -281,6 +419,14 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "LightInject": {
+            "target": "Package",
+            "version": "[5.5.0, )"
+          },
+          "LightInject.Annotation": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

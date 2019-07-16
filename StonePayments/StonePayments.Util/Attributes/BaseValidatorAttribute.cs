@@ -5,6 +5,8 @@ namespace StonePayments.Util.Attributes
     /// <summary>
     /// Classe base para todas as classes de validação de propriedades de implementadores de IBaseEntity.
     /// </summary>
+
+    [AttributeUsage(AttributeTargets.Property)]
     public class BaseValidatorAttribute: Attribute
     {
         public string ErrorMessage { get; set; }

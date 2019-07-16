@@ -16,7 +16,9 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Debug\netstandard2.0\StonePayments.Business.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Debug\netstandard2.0\StonePayments.Business.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Debug\netstandard2.0\StonePayments.Util.dll
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Debug\netstandard2.0\System.Net.Http.Formatting.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Debug\netstandard2.0\StonePayments.Util.pdb
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Debug\netstandard2.0\System.Net.Http.Formatting.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.csprojAssemblyReference.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.StonePaymentResource.resources
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Debug\netstandard2.0\StonePayments.Business.csproj.GenerateResource.cache

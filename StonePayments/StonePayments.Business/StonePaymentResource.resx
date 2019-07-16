@@ -165,4 +165,10 @@
   <data name="FetchingAllTransactions" xml:space="preserve">
     <value>Buscando todas as transações, aguarde ...</value>
   </data>
+  <data name="Server" xml:space="preserve">
+    <value>http://192.168.0.11:9090/</value>
+  </data>
+  <data name="EnterNumbersOnly" xml:space="preserve">
+    <value>Digite apenas números !</value>
+  </data>
 </root>

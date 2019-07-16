@@ -115,6 +115,15 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Digite apenas números !.
+        /// </summary>
+        public static string EnterNumbersOnly {
+            get {
+                return ResourceManager.GetString("EnterNumbersOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buscando todas as transações, aguarde ....
         /// </summary>
         public static string FetchingAllTransactions {
@@ -183,6 +192,15 @@ namespace StonePayments.Business {
         public static string SendTransactionError {
             get {
                 return ResourceManager.GetString("SendTransactionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://192.168.0.11:9090/.
+        /// </summary>
+        public static string Server {
+            get {
+                return ResourceManager.GetString("Server", resourceCulture);
             }
         }
         

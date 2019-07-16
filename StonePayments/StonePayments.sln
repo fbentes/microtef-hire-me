@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.Client", "StonePayments.Client\StonePayments.Client.csproj", "{23FCD548-6DA7-47B3-A7C8-36E990EBBEAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.ClientWPF", "StonePayments.ClientWPF\StonePayments.ClientWPF.csproj", "{23FCD548-6DA7-47B3-A7C8-36E990EBBEAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.Server", "StonePayments.Server\StonePayments.Server.csproj", "{4C1CE5A3-A0D7-4164-B4DF-7D0244835A92}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.Util", "StonePayments.Util\StonePayments.Util.csproj", "{1E71AD29-8527-4EC6-9815-9AD249CB59F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StonePayments.Business", "StonePayments.Business\StonePayments.Business.csproj", "{DA5B7672-EA31-4053-8059-7366CE459B77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.ClientWeb", "StonePayments.ClientWeb\StonePayments.ClientWeb.csproj", "{9EFDDAE1-D4AD-4532-A424-636D8DD3A800}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DA5B7672-EA31-4053-8059-7366CE459B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5B7672-EA31-4053-8059-7366CE459B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5B7672-EA31-4053-8059-7366CE459B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFDDAE1-D4AD-4532-A424-636D8DD3A800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFDDAE1-D4AD-4532-A424-636D8DD3A800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFDDAE1-D4AD-4532-A424-636D8DD3A800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFDDAE1-D4AD-4532-A424-636D8DD3A800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,7 +17,7 @@ No projeto StonePayments.Server:
 
 Fazer o Publish do projeto numa pasta qualquer e publicá-la no IIS com Binding 192.168.0.11:9090 (se o IP:PORTA forem 
 diferentes de 192.168.0.11:9090, favor alterar o valor da chave "Server" no arquivo de recurso 
-StonePayments.Client.StonePaymentServerResource no projeto StonePayments.Client para o novo IP:PORTA).
+StonePayments.Business.StonePaymentResource no projeto StonePayments.Business para o novo IP:PORTA).
 
 Para executar os endpoints no IP:PORTA = http://192.168.0.11:9090 (ex.: http://192.168.0.11:9090/stone/transactions) 
 pelo Postman ou pelo projeto StonePayments.Client em execução, copiar "DataBaseConnection.json" para 
@@ -33,7 +33,7 @@ pelo Postman quando estiver rodando o projeto StonePayments.Server, copiar "Data
 *******************   Sobre a Solution   *****************
 
 Foram utilizados as blibliotecas: LightInject (para injeção de dependências), o Newtonsoft.Json (para comunicações via json) 
-e o EntityFramework para a camada de persistência. 
+e o EntityFramework para a camada de persistência. O Syncfusion.Shared.WPF foi utilizado para input de dados da transação.
 
 OBS.:
 O CqrsLite iria ser aplicado como demonstração como solucionador de problemas de 
