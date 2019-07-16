@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace StonePayments.Util
 {
     /// <summary>
-    /// Lista com o par <Propriedade, Mensagem> de mensagens invalidadas pela classe ValidationProperties para 
-    /// cada propriedade.
+    /// Lista de mensagens invalidadas pela classe ValidationProperties para cada propriedade.
     /// </summary>
     public class ValidationErrorList: List<string>
     {
+        /// <summary>
+        /// Retorna uma string de todas as mensagens por propriedade do objeto concatenadas 
+        /// pronta para ser exibida para o usuário.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder errorMessages = new StringBuilder(this.Count);

@@ -22,11 +22,13 @@ namespace StonePayments.Server.Tests.Repository
         [TestMethod]
         public async Task TestSendTransactionSucess()
         {
+            Random r = new Random();
+
             var transactionModel = new TransactionModel
             {
                 CardNumber = 1234654789324,
-                Amount = new Random().NextDouble(),
-                Number = (byte)new Random().Next(1, 48),
+                Amount = Math.Round(r.NextDouble() + r.Next(1, 100), 2),
+                Number = (byte)r.Next(1, 48),
                 Type = TransactionType.Credit,
                 Password = "123456"
             };
@@ -44,9 +46,17 @@ namespace StonePayments.Server.Tests.Repository
         }
 
         [TestMethod]
-        public async Task TestGetTransactions()
+        public async Task TestGetAllTransactions()
         {
             var result = await TransactionDao.GetTransactions();
+
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public async Task TestGetTransactionsByCardNumber()
+        {
+            var result = await TransactionDao.GetTransactions(1234654789324);
 
             Assert.IsNotNull(result);
         }

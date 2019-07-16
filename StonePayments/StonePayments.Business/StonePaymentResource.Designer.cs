@@ -115,6 +115,15 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Buscando todas as transações, aguarde ....
+        /// </summary>
+        public static string FetchingAllTransactions {
+            get {
+                return ResourceManager.GetString("FetchingAllTransactions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O campo Number deve ser no mínimo igual a 1 !.
         /// </summary>
         public static string NumberMinValueEqualOne {

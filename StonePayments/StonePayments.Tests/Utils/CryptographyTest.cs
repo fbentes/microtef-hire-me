@@ -57,5 +57,13 @@ namespace StonePayments.Server.Tests
 
             Assert.IsNotNull(DecryptedPassword);
         }
+
+        [TestMethod]
+        public void TestEncryptPassword()
+        {
+            String encryptedPassword = Cryptography.Encrypt("654321", keyString);
+
+            Assert.IsNotNull(encryptedPassword);
+        }
     }
 }

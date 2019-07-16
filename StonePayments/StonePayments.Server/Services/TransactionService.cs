@@ -2,7 +2,6 @@
 using StonePayments.Business;
 using StonePayments.Server.Repository;
 using StonePayments.Util;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,8 +14,10 @@ namespace StonePayments.Server.Services
 
         public async Task<List<TransactionModel>> SendTransaction(TransactionModel transactionModel)
         {
-            // Caso outro cliente não valide o objeto, o servidor garante a integridade do objeto 
-            // antes de enviá-lo para o banco de dados.
+            // Caso outra aplicação cliente não valide o objeto antes de enviá-lo, ou o objeto 
+            // seja alterado durante o envio pela rede para o servidor Web, o servidor garante  
+            // a integridade do objeto antes de enviá-lo para o banco de dados, validando-o novamente.
+
             ValidationErrorList errorList = new ValidationErrorList();
 
             bool isValid = ValidationProperties.IsValid(transactionModel, out errorList);

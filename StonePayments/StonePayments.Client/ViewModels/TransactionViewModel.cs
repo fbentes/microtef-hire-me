@@ -2,21 +2,23 @@
 using StonePayments.Business;
 using StonePayments.Client.Commands;
 using StonePayments.Client.Util;
-using StonePayments.Client.Views;
-using System.Collections.Generic;
+using StonePayments.Util;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 
 namespace StonePayments.Client.ViewModels
 {
-    public class SendTransactionViewModel : INotifyPropertyChanged, ISendTransactionViewModel
+    public class TransactionViewModel : BaseViewModel, ITransactionViewModel
     {
         [Inject]
         public ITransactionModel TransactionModel { get; set; }
 
         private ObservableCollection<TransactionModel> transactionModelList;
 
-        public IViewObservable ViewObservable { get; set; }
+        private ObservableCollection<TransactionModel> allTransactionModelList;
+
+        public IViewObservable MainViewObservable { get; set; }
+
+        public IViewOpenObservable GetTransactionsViewObservable { get; set; }
 
         public SendTransactionCommand SendTransactionCommand
         { get
@@ -37,11 +39,9 @@ namespace StonePayments.Client.ViewModels
         {
             get
             {
-                return new GetTransactionsCommand(new GetTransactionsViewModel());
+                return new GetTransactionsCommand(this);
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public long? CardNumber
         {
@@ -138,12 +138,24 @@ namespace StonePayments.Client.ViewModels
                 OnPropertyChange("TransactionModelList");
             }
         }
-
-        protected void OnPropertyChange(string propertyName)
+        public ObservableCollection<TransactionModel> AllTransactionModelList
         {
-            if (PropertyChanged != null)
+            get
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                return allTransactionModelList;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    allTransactionModelList = new ObservableCollection<TransactionModel>();
+                }
+                else
+                {
+                    allTransactionModelList = value;
+                }
+
+                OnPropertyChange("AllTransactionModelList");
             }
         }
     }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/// <summary>
+/// Classe de validação para propriedades de IBaseEntity que não podem ser nulas.
+/// </summary>
 namespace StonePayments.Util.Attributes
 {
     public class RequiredValueAttribute: BaseValidatorAttribute

@@ -1,39 +1,72 @@
-﻿using StonePayments.Client.ViewModels;
+﻿using StonePayments.Business;
+using StonePayments.Client.Util;
+using StonePayments.Client.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace StonePayments.Client.Views
 {
     /// <summary>
-    /// Interaction logic for GetTransactions.xaml
+    /// GUI para a exibição da lista de todas as transações efetuadas.
     /// </summary>
-    public partial class GetTransactionsWindow : Window, IGetTransactionsWindow
+    public partial class GetTransactionsWindow : Window, IViewOpenObservable
     {
-        public IGetTransactionsViewModel GetTransactionsViewModel { get; set; }
+        public ITransactionViewModel TransactionViewModel { get; set; }
 
-        public GetTransactionsWindow()
+        private MessageWaitingProcessWindow messageWaitingProcessWindow;
+
+        public GetTransactionsWindow(ITransactionViewModel transactionViewModel)
         {
             InitializeComponent();
 
-            GetTransactionsViewModel = new GetTransactionsViewModel();
+            TransactionViewModel = transactionViewModel;
 
             Loaded += GetTransactionsWindow_Loaded;
+            Closing += GetTransactionsWindow_Closing;
+        }
+
+        private void GetTransactionsWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visibility = Visibility.Hidden;
+
+            (TransactionViewModel.MainViewObservable as Window).Focus();
         }
 
         private void GetTransactionsWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            DataContext = TransactionViewModel;
+        }
+
+        public void StartProcess()
+        {
+            Cursor = Cursors.Wait;
+
+            messageWaitingProcessWindow = new MessageWaitingProcessWindow();
+            messageWaitingProcessWindow.Owner = this;
+            messageWaitingProcessWindow.Topmost = true;
+            messageWaitingProcessWindow.Message = StonePaymentResource.FetchingAllTransactions;
+            messageWaitingProcessWindow.Show();
+        }
+
+        public void EndProcess()
+        {
+            messageWaitingProcessWindow.Close();
+            Cursor = Cursors.Arrow;
+        }
+
+        public void SendResultMessage(string message, string caption = "")
+        {
+            messageWaitingProcessWindow.Close();
+
+            MessageBox.Show(message, caption);
+
+            this.Focus();
         }
     }
 }

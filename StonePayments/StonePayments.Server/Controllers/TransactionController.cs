@@ -14,6 +14,10 @@ namespace StonePayments.Server.Controllers
         public ITransactionService TransactionService { get; set; }
 
 
+        /// <summary>
+        /// Retorna a lista de todas as transações efetuadas.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("stone/transactions")]
         public async Task<IHttpActionResult> GetTransactions()
@@ -23,6 +27,11 @@ namespace StonePayments.Server.Controllers
             return Ok<List<TransactionModel>>(transactions);
         }
 
+        /// <summary>
+        /// Retorna a lista de transações efetuadas por número do cartão.
+        /// </summary>
+        /// <param name="cardNumber"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("stone/transactions/{cardNumber}")]
         public async Task<IHttpActionResult> GetTransactions(long cardNumber)
@@ -32,6 +41,12 @@ namespace StonePayments.Server.Controllers
             return Ok<List<TransactionModel>>(transactions);
         }
 
+
+        /// <summary>
+        /// Envia uma instanção da transação para ser persistida no banco de dados.
+        /// </summary>
+        /// <param name="transactionModel"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("stone/sendTransaction")]
         public async Task<IHttpActionResult> SendTransaction([FromBody]TransactionModel transactionModel)

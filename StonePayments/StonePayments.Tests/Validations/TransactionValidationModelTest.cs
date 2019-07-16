@@ -16,7 +16,7 @@ namespace StonePayments.Server.Tests.Validations
                 Id = Guid.NewGuid(),
                 Amount = 0.05,
                 Card = null,
-                Password = "123",
+                Password = "132456",
                 Type = TransactionType.Credit,
                 Number = null                
             };
@@ -45,7 +45,7 @@ namespace StonePayments.Server.Tests.Validations
                 Amount = 120,
                 Type = TransactionType.Credit,
                 Number = 4,
-                Password = "12345"
+                Password = "123"
             };
 
             ValidationErrorList errorList = new ValidationErrorList();

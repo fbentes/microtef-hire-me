@@ -91,10 +91,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StonePaymentServerResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\GetTransactionsViewModel.cs" />
-    <Compile Include="ViewModels\IGetTransactionsViewModel.cs" />
-    <Compile Include="ViewModels\ISendTransactionViewModel.cs" />
-    <Compile Include="ViewModels\SendTransactionViewModel.cs" />
+    <Compile Include="Util\IViewOpenObservable.cs" />
+    <Compile Include="ViewModels\ITransactionViewModel.cs" />
+    <Compile Include="ViewModels\TransactionViewModel.cs" />
     <Page Include="Views\GetTransactionsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,7 +102,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SendTransactionWindow.xaml">
+    <Page Include="Views\TransactionWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -114,14 +113,13 @@
     <Compile Include="Views\GetTransactionsWindow.xaml.cs">
       <DependentUpon>GetTransactionsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Util\ICursor.cs" />
-    <Compile Include="Views\IGetTransactionsWindow.cs" />
-    <Compile Include="Views\ISendTransactionWindow.cs" />
+    <Compile Include="Util\IViewObservable.cs" />
+    <Compile Include="Views\ITransactionWindow.cs" />
     <Compile Include="Views\MessageWaitingProcessWindow.xaml.cs">
       <DependentUpon>MessageWaitingProcessWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SendTransactionWindow.xaml.cs">
-      <DependentUpon>SendTransactionWindow.xaml</DependentUpon>
+    <Compile Include="Views\TransactionWindow.cs">
+      <DependentUpon>TransactionWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

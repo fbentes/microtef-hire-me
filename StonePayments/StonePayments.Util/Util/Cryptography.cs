@@ -7,13 +7,22 @@ using System.Threading.Tasks;
 
 namespace StonePayments.Util
 {
+    /// <summary>
+    /// Classe para criptografia de valores strings, seja para senhas, conexões com o banco, etc.
+    /// </summary>
     public class Cryptography
     {
-        public string GenerateAPassKey(string passphrase)
+        /// <summary>
+        /// Gerador de uma chave base para a criptografia e descriptografia de valores.
+        /// Após gerá-la, copiar e colar na variável KeyStringConnection.VALUE.
+        /// </summary>
+        /// <param name="baseKey">Chave base a ser passada pelo cliente. Pode ser qualquer string.</param>
+        /// <returns></returns>
+        public string GenerateAPassKey(string baseKey)
         {
-            string passPhrase = passphrase;
+            string passPhrase = baseKey;
 
-            string saltValue = passphrase;
+            string saltValue = baseKey;
 
             string hashAlgorithm = "SHA1";
 
@@ -32,7 +41,15 @@ namespace StonePayments.Util
             return KeyString;
         }
 
-        public static string Encrypt(string plainStr, string KeyString)
+        /// <summary>
+        /// Criptografa um valor string e o retorna para o cliente.
+        /// String EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=senha;", KeyStringConnection.VALUE);
+        /// 
+        /// </summary>
+        /// <param name="valueString">Valor a ser criptografado, como senhas, por exemplo.</param>
+        /// <param name="KeyString">A chave base criptografada pelo método GenerateAPassKey(string baseKey).</param>
+        /// <returns>Retorna valueString criptografado.</returns>
+        public static string Encrypt(string valueString, string KeyString)
         {
             RijndaelManaged aesEncryption = new RijndaelManaged();
 
@@ -48,7 +65,7 @@ namespace StonePayments.Util
 
             aesEncryption.Key = KeyInBytes;
 
-            byte[] plainText = ASCIIEncoding.UTF8.GetBytes(plainStr);
+            byte[] plainText = ASCIIEncoding.UTF8.GetBytes(valueString);
 
             ICryptoTransform crypto = aesEncryption.CreateEncryptor();
 
@@ -57,6 +74,14 @@ namespace StonePayments.Util
             return Convert.ToBase64String(cipherText);
         }
 
+        /// <summary>
+        /// Descriptografa um valor string e o retorna para o cliente.
+        /// String DecryptedPassword = Cryptography.Decrypt(EncryptedPassword, keyString);
+        /// 
+        /// </summary>
+        /// <param name="encryptedText"></param>
+        /// <param name="KeyString"></param>
+        /// <returns>Retorna encryptedText descriptografado.</returns>
         public static string Decrypt(string encryptedText, string KeyString)
         {
             RijndaelManaged aesEncryption = new RijndaelManaged();

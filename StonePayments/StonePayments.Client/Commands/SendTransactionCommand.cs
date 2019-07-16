@@ -4,22 +4,22 @@ using System.Windows;
 using StonePayments.Util;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Collections.Generic;
 using StonePayments.Business;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.Collections.ObjectModel;
-using Newtonsoft.Json.Linq;
 
 namespace StonePayments.Client.ViewModels
 {
+    /// <summary>
+    /// Classe responsável para envio dos dados da transação para o servidor.
+    /// </summary>
     public class SendTransactionCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
 
-        private readonly ISendTransactionViewModel sendTransactionViewModel;
+        private readonly ITransactionViewModel sendTransactionViewModel;
 
-        public SendTransactionCommand(ISendTransactionViewModel sendTransactionViewModel)
+        public SendTransactionCommand(ITransactionViewModel sendTransactionViewModel)
         {
             this.sendTransactionViewModel = sendTransactionViewModel;
         }
@@ -49,28 +49,34 @@ namespace StonePayments.Client.ViewModels
 
                     var result = readTask.Result;
 
+                    // Checa se é uma string json válida...
+
                     if(result.StartsWith("{") && result.EndsWith("}") || 
                        result.StartsWith("[") && result.EndsWith("]"))
                     {
                         sendTransactionViewModel.TransactionModelList =
                             JsonConvert.DeserializeObject<ObservableCollection<TransactionModel>>(result);
 
-                        sendTransactionViewModel.ViewObservable.SendResultMessage(
+                        sendTransactionViewModel.MainViewObservable.SendResultMessage(
                             StonePaymentResource.TransactionSendOk, StonePaymentResource.ResultTitle);
                     }
-                    else
+                    else // ... senão é uma mensagem string de resultado para exibição para o usuário.
                     {
-                        sendTransactionViewModel.ViewObservable.SendResultMessage(
+                        sendTransactionViewModel.MainViewObservable.SendResultMessage(
                             result.Replace("\"",""), StonePaymentResource.ResultTitle);
                     }
                 }
                 else
                 {
-                    sendTransactionViewModel.ViewObservable.SendResultMessage("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
+                    sendTransactionViewModel.MainViewObservable.SendResultMessage("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
                 }
             }
         }
-
+        
+        /// <summary>
+        /// Método para validar as propriedades do objeto antes de enviá-lo para o servidor.
+        /// </summary>
+        /// <returns>Retorna true se passou na validação, e false caso contrário.</returns>
         private bool isValidProperties()
         {
             ValidationErrorList errorList;
@@ -95,13 +101,13 @@ namespace StonePayments.Client.ViewModels
 
             try
             {
-                sendTransactionViewModel.ViewObservable.StartProcess();
+                sendTransactionViewModel.MainViewObservable.StartProcess();
 
                 SendTransaction();
             }
             finally
             {
-                sendTransactionViewModel.ViewObservable.EndProcess();
+                sendTransactionViewModel.MainViewObservable.EndProcess();
             }
         }
     }

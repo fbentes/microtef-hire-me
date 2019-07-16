@@ -2,26 +2,25 @@
 using StonePayments.Business;
 using StonePayments.Client.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace StonePayments.Client.Commands
 {
+    /// <summary>
+    /// Classe responsável para solicitar do servidor a lista de todas as transações efetuadas.
+    /// </summary>
     public class GetTransactionsCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
 
-        private readonly IGetTransactionsViewModel getTransactionsViewModel;
+        private readonly ITransactionViewModel transactionViewModel;
 
-        public GetTransactionsCommand(IGetTransactionsViewModel getTransactionsViewModel)
+        public GetTransactionsCommand(ITransactionViewModel transactionViewModel)
         {
-            this.getTransactionsViewModel = getTransactionsViewModel;
+            this.transactionViewModel = transactionViewModel;
         }
 
         public bool CanExecute(object parameter)
@@ -38,7 +37,7 @@ namespace StonePayments.Client.Commands
                 client.DefaultRequestHeaders.Accept.Add(
                         new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = client.GetAsync("stone / sendTransaction").Result;
+                var response = client.GetAsync("stone/transactions").Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -47,16 +46,30 @@ namespace StonePayments.Client.Commands
 
                     var result = readTask.Result;
 
-                    getTransactionsViewModel.TransactionModelList =
+                    transactionViewModel.AllTransactionModelList =
                         JsonConvert.DeserializeObject<ObservableCollection<TransactionModel>>(result);
 
                 }
-
+                else
+                {
+                    transactionViewModel.GetTransactionsViewObservable.SendResultMessage("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
+                }
             }
         }
         public void Execute(object parameter)
         {
-            getTransactions();
+            transactionViewModel.GetTransactionsViewObservable.Show();
+
+            try
+            {
+                transactionViewModel.GetTransactionsViewObservable.StartProcess();
+
+                getTransactions();
+            }
+            finally
+            {
+                transactionViewModel.GetTransactionsViewObservable.EndProcess();
+            }
         }
     }
 }

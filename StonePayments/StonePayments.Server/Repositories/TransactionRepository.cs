@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using StonePayments.Util;
 
 namespace StonePayments.Server.Repository
 {
     /// <summary>
-    /// Classe responsável por todas as transações de cartão com o BD.
+    /// Classe responsável por todas as transações de cartão com o banco de dados.
     /// </summary>
     public class TransactionRepository : ITransactionRepository
     {
@@ -27,11 +28,11 @@ namespace StonePayments.Server.Repository
 
                 try
                 {
-                        // O cliente informa apenas o CarnNumber, então é necessário buscar a instância
-                        // do Card para setar seu Id para a entidade Transaction e validar a senha do
-                        // cartão se está correta.
+                    // A aplicação cliente informa apenas o CarnNumber, então é necessário buscar 
+                    // a instância do Card para setar seu Id para a entidade Transaction e validar 
+                    // a senha do cartão se está correta.
 
-                        Card card = await (from c in context.Cards
+                    Card card = await (from c in context.Cards
                                            where c.Number == transactionModel.CardNumber
                                            select c).FirstOrDefaultAsync<Card>();
 
@@ -44,7 +45,9 @@ namespace StonePayments.Server.Repository
 
                         if (hasPassword)
                         {
-                            if (card.Password.Trim().ToLower() != transactionModel.Password.Trim().ToLower())
+                            string passWordDecrypted = Cryptography.Decrypt(card.Password.Trim(), KeyStringCryptography.VALUE);
+
+                            if (passWordDecrypted != transactionModel.Password)
                             {
                                 throw new SendTransactionException(StonePaymentResource.PasswordInvalid);
                             }
@@ -62,6 +65,8 @@ namespace StonePayments.Server.Repository
                             {
                                 throw new SendTransactionException(StonePaymentResource.CustomerHasNoAvailableBalance);
                             }
+
+                            // Reduz do seu limite de crédito o valor informado na transação.
 
                             customer.CreditLimit -= transactionModel.Amount.Value;
                         }
@@ -86,7 +91,8 @@ namespace StonePayments.Server.Repository
                         trans.Commit();
 
                         // Após inserir um novo registro de transação, retorna a lista de transações feitas
-                        // para o cliente, evitando assim, mais uma chamada remota para obter essa lista.
+                        // para o cliente pelo seu cartão, evitando assim, mais uma chamada remota para obter 
+                        // essa lista e exibí-la na tela.
 
                         return await GetTransactions(transactionModel.CardNumber);
                 }
@@ -100,7 +106,7 @@ namespace StonePayments.Server.Repository
         }
 
         /// <summary>
-        /// Retorna a lista de transações efetuadas para o cliente ou todas as transações.
+        /// Retorna a lista de transações efetuadas por cartão, ou todas as transações.
         /// </summary>
         /// <returns>Lista de objetos Transaction</returns>
         public async Task<List<TransactionModel>> GetTransactions(long? cardNumber = null)
@@ -139,7 +145,6 @@ namespace StonePayments.Server.Repository
                                          },
                                          
                                      }).ToList<TransactionModel>();
-
 
                 return results;
             }

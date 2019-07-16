@@ -52,17 +52,17 @@
     <Compile Include="Attributes\RangeValuesAttribute.cs" />
     <Compile Include="Attributes\MinRequiredValueAttribute.cs" />
     <Compile Include="Attributes\RequiredValueAttribute.cs" />
+    <Compile Include="Util\BaseViewModel.cs" />
     <Compile Include="Util\CustomDateTimeConverter.cs" />
     <Compile Include="Util\IBaseEntity.cs" />
-    <Compile Include="Util\KeyValueValidation.cs" />
     <Compile Include="Util\ValidationProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\BaseEntity.cs" />
     <Compile Include="Util\Cryptography.cs" />
-    <Compile Include="Util\DataBaseConnection.cs" />
+    <Compile Include="Util\DataBaseConnectionDecryptedString.cs" />
     <Compile Include="Util\ValidationErrorList.cs" />
     <Compile Include="Util\JSONHelper.cs" />
-    <Compile Include="Util\KeyStringConnection.cs" />
+    <Compile Include="Util\KeyStringCryptography.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

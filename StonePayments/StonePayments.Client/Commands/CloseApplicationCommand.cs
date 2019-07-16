@@ -13,9 +13,9 @@ namespace StonePayments.Client.Commands
     {
         public event EventHandler CanExecuteChanged;
 
-        private readonly ISendTransactionViewModel transactionViewModel;
+        private readonly ITransactionViewModel transactionViewModel;
 
-        public CloseApplicationCommand(ISendTransactionViewModel transactionViewModel)
+        public CloseApplicationCommand(ITransactionViewModel transactionViewModel)
         {
             this.transactionViewModel = transactionViewModel;
         }

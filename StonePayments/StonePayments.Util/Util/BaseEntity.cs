@@ -2,11 +2,13 @@
 
 namespace StonePayments.Util
 {
+    /// <summary>
+    /// Classe mãe para entidades do modelo de domínio.
+    /// </summary>
     public class BaseEntity: IBaseEntity
     {
         public Guid Id { get; set; }
-
-        // override object.Equals
+        
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())

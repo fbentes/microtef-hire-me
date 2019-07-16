@@ -23,10 +23,10 @@ namespace StonePayments.Client
             container.EnableAnnotatedPropertyInjection();
 
             container.Register<ITransactionModel, TransactionModel>();
-            container.Register<ISendTransactionViewModel, SendTransactionViewModel>();
-            container.Register<ISendTransactionWindow, SendTransactionWindow>();
+            container.Register<ITransactionViewModel, TransactionViewModel>();
+            container.Register<ITransactionWindow, TransactionWindow>();
 
-            ISendTransactionWindow sendTransactionWindow = container.GetInstance<ISendTransactionWindow>();
+            ITransactionWindow sendTransactionWindow = container.GetInstance<ITransactionWindow>();
             sendTransactionWindow.Show();
         }
     }

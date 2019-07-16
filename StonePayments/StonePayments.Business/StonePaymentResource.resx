@@ -162,4 +162,7 @@
   <data name="ValidationTitle" xml:space="preserve">
     <value>Validação</value>
   </data>
+  <data name="FetchingAllTransactions" xml:space="preserve">
+    <value>Buscando todas as transações, aguarde ...</value>
+  </data>
 </root>

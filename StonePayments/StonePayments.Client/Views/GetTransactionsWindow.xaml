@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StonePayments.Client.Views"
         mc:Ignorable="d"
-        Title="Listagem de todas as transações" Height="450" Width="800">
+        Title="Listagem de todas as transações" Height="450" Width="800" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="95*"/>
             <ColumnDefinition Width="699*"/>
         </Grid.ColumnDefinitions>
-        <ListView ItemsSource="{Binding TransactionModelList}" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,0,0.334,-0.333">
+        <ListView ItemsSource="{Binding AllTransactionModelList}" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,0,0.334,-0.333">
             <ListView.View>
-                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Authors">
+                <GridView AllowsColumnReorder="true" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <GridViewColumn Header="Customer"   Width="140" DisplayMemberBinding="{Binding Path=CustomerName}" />
                     <GridViewColumn Header="CardNumber" Width="100" DisplayMemberBinding="{Binding Path=Card}" />
                     <GridViewColumn Header="Amount"     Width="60"  DisplayMemberBinding="{Binding Path=Amount}" />

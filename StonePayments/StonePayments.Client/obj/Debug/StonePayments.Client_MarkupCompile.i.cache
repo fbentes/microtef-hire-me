@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Client\App.xaml
-31208749139
+3230900373
 
-19-1101831522
+17-866341737
 124-1802219778
-Views\GetTransactionsWindow.xaml;Views\MessageWaitingProcessWindow.xaml;Views\SendTransactionWindow.xaml;
+Views\GetTransactionsWindow.xaml;Views\MessageWaitingProcessWindow.xaml;Views\TransactionWindow.xaml;
 
 True
 

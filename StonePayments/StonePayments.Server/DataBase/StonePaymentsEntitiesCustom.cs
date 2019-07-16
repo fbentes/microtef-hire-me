@@ -1,18 +1,19 @@
 ﻿using StonePayments.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace StonePayments.Server
 {
+    /// <summary>
+    /// Classe especializada para capturar a StringConnection descriptografada e setá-la para
+    /// o DataBase.
+    /// </summary>
     public class StonePaymentsEntitiesCustom : StonePaymentsEntities
     {
         public StonePaymentsEntitiesCustom()
         {
             string path = Environment.CurrentDirectory + "\\DataBaseConnection.json";
 
-            string stringConnection = DataBaseConnection.GetConnectionString(path, KeyStringConnection.VALUE);
+            string stringConnection = DataBaseConnectionDecryptedString.Execute(path, KeyStringCryptography.VALUE);
 
             Database.Connection.ConnectionString = stringConnection;
         }

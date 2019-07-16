@@ -1,12 +1,11 @@
 ﻿using Newtonsoft.Json.Converters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StonePayments.Util
 {
+    /// <summary>
+    /// Classe utilizada para anotação de propriedades DateTime de objetos para poderem ser 
+    /// deserializados pelo método Newtonsoft.Json.JsonConvert.DeserializeObject.
+    /// </summary>
     public class CustomDateTimeConverter : IsoDateTimeConverter
     {
         public CustomDateTimeConverter()

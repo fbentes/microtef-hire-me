@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StonePayments.Util
 {
+
+    /// <summary>
+    /// Classe para anotar propriedades que requeiram validação de formato de data de acordo com 
+    /// a propriedade StringFormat.
+    /// </summary>
     public class DateTimeFormatAttribute : Attribute
     {
         public string StringFormat { set; get; }

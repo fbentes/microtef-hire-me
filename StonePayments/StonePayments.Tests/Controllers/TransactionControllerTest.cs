@@ -31,14 +31,16 @@ namespace StonePayments.Server.Tests.Controllers
         [MSTest.TestMethod]
         public async Task TestSendTransactionSucess()
         {
+            Random r = new Random();
+
             var transactionModel = new TransactionModel
-                {
+                {                    
                     CardNumber = 1234654789324,
-                    Amount = new Random().NextDouble(),
-                    Number = (byte)new Random().Next(1, 48),
+                    Amount = Math.Round(r.NextDouble() + r.Next(1, 100), 2),
+                    Number = (byte)r.Next(1, 48),
                     Type = TransactionType.Credit,
-                    Password = "123456"
-                };
+                    Password = "132456"
+            };
 
             // Act
             IHttpActionResult result = await Controller.SendTransaction(transactionModel) as IHttpActionResult;

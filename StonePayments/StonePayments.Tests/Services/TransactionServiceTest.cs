@@ -21,10 +21,12 @@ namespace StonePayments.Server.Tests.Services
         [TestMethod]
         public async Task TestSendTransactionSucess()
         {
+            Random r = new Random();
+
             var transactionModel = new TransactionModel
             {
                 CardNumber = 1234654789324,
-                Amount = new Random().NextDouble(),
+                Amount = Math.Round(r.NextDouble() + r.Next(1, 100), 2),
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1,36),
                 Password = "123456"
@@ -51,7 +53,7 @@ namespace StonePayments.Server.Tests.Services
                 Amount = new Random().NextDouble(),
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1, 36),
-                Password = "123456"
+                Password = "132456"  // 123456
             };
 
             try
@@ -75,7 +77,7 @@ namespace StonePayments.Server.Tests.Services
                 Amount = new Random().NextDouble(),
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1, 36),
-                Password = "123456"
+                Password = "132456"   // 132456
             };
 
             try
@@ -99,7 +101,7 @@ namespace StonePayments.Server.Tests.Services
                 Amount = 0.09,
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1, 36),
-                Password = "123456"
+                Password = "132456"  // 123456
             };
 
             try

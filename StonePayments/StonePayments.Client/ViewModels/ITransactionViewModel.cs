@@ -5,13 +5,17 @@ using System.ComponentModel;
 
 namespace StonePayments.Client.ViewModels
 {
-    public interface ISendTransactionViewModel
+    public interface ITransactionViewModel
     {
         ITransactionModel TransactionModel { get; set; }
 
-        IViewObservable ViewObservable { get; set; }
+        IViewObservable MainViewObservable { get; set; }
+
+        IViewOpenObservable GetTransactionsViewObservable { get; set; }
 
         ObservableCollection<TransactionModel> TransactionModelList { get; set; }
+
+        ObservableCollection<TransactionModel> AllTransactionModelList { get; set; }
 
         SendTransactionCommand SendTransactionCommand { get; }
 
@@ -26,5 +30,7 @@ namespace StonePayments.Client.ViewModels
         TransactionType[] TypeList { get; }
 
         byte? Number { get; set; }
+
+        string Password { get; set; }
     }
 }

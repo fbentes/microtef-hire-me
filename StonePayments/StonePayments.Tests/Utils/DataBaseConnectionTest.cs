@@ -15,7 +15,7 @@ namespace StonePayments.Server.Tests.Util
 
             string path = directory + "\\DataBaseConnection.json";
 
-            string s = DataBaseConnection.GetConnectionString(path, KeyStringConnection.VALUE);
+            string s = DataBaseConnectionDecryptedString.Execute(path, KeyStringCryptography.VALUE);
 
             Assert.IsNotNull(s);
         }
