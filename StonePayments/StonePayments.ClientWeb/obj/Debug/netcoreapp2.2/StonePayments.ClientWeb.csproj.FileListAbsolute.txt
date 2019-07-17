@@ -7,8 +7,11 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\StonePayments.ClientWeb.Views.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\StonePayments.Business.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\StonePayments.Util.dll
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\EntityFramework.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\StonePayments.Business.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\StonePayments.Util.pdb
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\StonePayments.Util.dll.config
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Debug\netcoreapp2.2\EntityFramework.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\obj\Debug\netcoreapp2.2\StonePayments.ClientWeb.csprojAssemblyReference.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\obj\Debug\netcoreapp2.2\StonePayments.ClientWeb.csproj.CoreCompileInputs.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\obj\Debug\netcoreapp2.2\StonePayments.ClientWeb.RazorAssemblyInfo.cache

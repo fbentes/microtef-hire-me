@@ -3,7 +3,7 @@ using StonePayments.Util.Attributes;
 
 namespace StonePayments.Business
 {
-    public interface ITransactionModel: IBaseEntity
+    public interface ITransactionModel: IBaseEntityModel
     {
         [RequiredValue(nameof(StonePaymentResource.CardNumberNotNull))]
         [RangeLengthValues(12, 19, nameof(StonePaymentResource.CardNumberBetween12_19_Digits))]

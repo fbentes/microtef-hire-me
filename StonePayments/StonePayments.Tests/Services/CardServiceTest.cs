@@ -5,22 +5,25 @@ using System.Threading.Tasks;
 using LightInject;
 using StonePayments.Business;
 using System;
+using StonePayments.Util.Services;
 
 namespace StonePaymentsServer.Tests.Services
 {
     [TestClass]
     public class CardServiceTest : BaseTest
     {
-        public ICardService CardService { get; set; }
+        public IBaseCRUDServiceBridge<CardModel> CardService { get; set; }
 
         public CardServiceTest()
         {
-            this.CardService = serviceContainer.GetInstance<ICardService>();
+            this.CardService = serviceContainer.GetInstance<IBaseCRUDServiceBridge<CardModel>>();
         }
 
         [TestMethod]
         public async Task InsertCardSucess()
         {
+            var r = new Random();
+
             var CardModel = new CardModel
             {
                 Id = Guid.NewGuid(),
@@ -31,7 +34,7 @@ namespace StonePaymentsServer.Tests.Services
                 CardBrand = CardBrand.AmericanExpress,
                 ExpirationDate = DateTime.Now,
                 HasPassword = true,
-                Number = 963258741258,
+                Number = Convert.ToInt64(r.Next(1,4000).ToString() + r.Next(4001,8000).ToString() + r.Next(8001,12000).ToString() + r.Next(12001, 16000).ToString()),
                 Password = "963258",
                 Type = CardType.Chip                
             };

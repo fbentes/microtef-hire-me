@@ -1,8 +1,11 @@
 ﻿using LightInject;
 using LightInject.Web;
+using StonePayments.Business;
 using StonePayments.Server.Controllers;
 using StonePayments.Server.Repositories;
 using StonePayments.Server.Services;
+using StonePayments.Util.Repositories;
+using StonePayments.Util.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,15 +42,27 @@ namespace StonePayments.Server
 
             container.EnableWebApi(GlobalConfiguration.Configuration);
 
-            container.Register<ICardRepository, CardRepository>();
+            #region Injetar objetos relacionados a entidade Card
 
-            container.Register<ICustomerRepository, CustomerRepository>();
+            container.Register<IBaseCRUDRepository<CardModel>, CardRepository>();
+            container.Register<IBaseCRUDServiceBridge<CardModel>, CardService>();
+
+            #endregion
+
+            #region Injetar objetos relacionados a entidade Customer
+
+            container.Register<IBaseCRUDRepository<CustomerModel>, CustomerRepository>();
+            container.Register<IBaseCRUDServiceBridge<CustomerModel>, CustomerService>();
+
+            #endregion
+
+            #region Injetar objetos relacionados a entidade Transaction
 
             container.Register<ITransactionRepository, TransactionRepository>();
-
             container.Register<ITransactionService, TransactionService>();
-
             container.Register<ITransactionController, TransactionController>();
+
+            #endregion
         }
     }
 }

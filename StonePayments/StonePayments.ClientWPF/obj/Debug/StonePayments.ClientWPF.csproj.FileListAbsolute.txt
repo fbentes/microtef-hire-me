@@ -54,7 +54,9 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\System.ValueTuple.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\System.Web.Http.dll
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\EntityFramework.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\StonePayments.Util.pdb
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\StonePayments.Util.dll.config
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\StonePayments.Business.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\LightInject.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\LightInject.xml
@@ -65,6 +67,7 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\System.ValueTuple.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\System.Web.Http.xml
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\bin\Debug\EntityFramework.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\obj\Debug\StonePayments.ClientWPF.csprojAssemblyReference.cache
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\obj\Debug\Views\GetTransactionsWindow.g.cs
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\obj\Debug\Views\MessageWaitingProcessWindow.g.cs

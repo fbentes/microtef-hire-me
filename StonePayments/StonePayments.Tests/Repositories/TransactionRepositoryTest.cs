@@ -12,11 +12,11 @@ namespace StonePayments.Server.Tests.Repository
     [TestClass]
     public class TransactionRepositoryTest: BaseTest
     {
-        private ITransactionRepository TransactionDao { get; set; }
+        private ITransactionRepository TransactionRepository { get; set; }
 
         public TransactionRepositoryTest()
         {
-            this.TransactionDao = serviceContainer.GetInstance<ITransactionRepository>();
+            this.TransactionRepository = serviceContainer.GetInstance<ITransactionRepository>();
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace StonePayments.Server.Tests.Repository
 
             try
             {
-                List<TransactionModel> resultList = await TransactionDao.SendTransaction(transactionModel);
+                List<TransactionModel> resultList = await TransactionRepository.SendTransaction(transactionModel);
 
                 Assert.IsTrue(true);
             }
@@ -48,7 +48,7 @@ namespace StonePayments.Server.Tests.Repository
         [TestMethod]
         public async Task TestGetAllTransactions()
         {
-            var result = await TransactionDao.GetTransactions();
+            var result = await TransactionRepository.GetTransactions();
 
             Assert.IsNotNull(result);
         }
@@ -56,7 +56,7 @@ namespace StonePayments.Server.Tests.Repository
         [TestMethod]
         public async Task TestGetTransactionsByCardNumber()
         {
-            var result = await TransactionDao.GetTransactions(1234654789324);
+            var result = await TransactionRepository.GetTransactions(1234654789324);
 
             Assert.IsNotNull(result);
         }

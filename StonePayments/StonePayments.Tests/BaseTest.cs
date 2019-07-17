@@ -1,8 +1,11 @@
 ﻿using LightInject;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StonePayments.Business;
 using StonePayments.Server.Controllers;
 using StonePayments.Server.Repositories;
 using StonePayments.Server.Services;
+using StonePayments.Util.Repositories;
+using StonePayments.Util.Services;
 
 namespace StonePayments.Server.Tests
 {
@@ -25,14 +28,13 @@ namespace StonePayments.Server.Tests
             serviceContainer.Register<ITransactionController, TransactionController>();
 
 
-            serviceContainer.Register<ICustomerRepository, CustomerRepository>();
+            serviceContainer.Register<IBaseCRUDRepository<CustomerModel>, CustomerRepository>();
 
-            serviceContainer.Register<ICustomerService, CustomerService>();
+            serviceContainer.Register<IBaseCRUDRepository<CardModel>, CardRepository>();
 
-            serviceContainer.Register<ICardRepository, CardRepository>();
+            serviceContainer.Register<IBaseCRUDServiceBridge<CardModel>, CardService>();
 
-            serviceContainer.Register<ICardService, CardService>();
-
+            serviceContainer.Register<IBaseCRUDServiceBridge<CustomerModel>, CustomerService>();
         }
     }
 }

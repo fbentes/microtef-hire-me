@@ -1,39 +1,35 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using LightInject;
 using StonePayments.Business;
-using StonePayments.Server.Repositories;
+using StonePayments.Util;
+using StonePayments.Util.Repositories;
 using StonePayments.Util.Services;
 
 namespace StonePayments.Server.Services
 {
-    public class CardService : BaseEntityModelService<CardModel, CardException>, ICardService
+    /// <summary>
+    /// Classe estendida apenas para a sobrescrita da propriedade BaseCRUDRepository para poder
+    /// ser setada pelo LightInject.
+    /// </summary>
+    public class CardService : BaseCRUDServiceBridge<CardModel, CardException>
     {
         [Inject]
-        public ICardRepository CardRepository { get; set; }
+        public override IBaseCRUDRepository<CardModel> BaseCRUDRepository { get; set; }
 
-        public async Task Insert(CardModel CardModel)
+        public override Task Insert(CardModel entityModel)
         {
-            validate(CardModel);
+            entityModel.Password = Cryptography.Encrypt(entityModel.Password, KeyStringCryptography.VALUE);
 
-            await CardRepository.Insert(CardModel);
+            return base.Insert(entityModel);
         }
 
-        public async Task Update(CardModel CardModel)
+        public override Task Update(CardModel entityModel)
         {
-            validate(CardModel);
+            string passwordDecrypted = Cryptography.Decrypt(entityModel.Password, KeyStringCryptography.VALUE);
 
-            await CardRepository.Update(CardModel);
-        }
+            entityModel.Password = Cryptography.Encrypt(passwordDecrypted, KeyStringCryptography.VALUE);
 
-        public async Task Delete(string id)
-        {
-            await CardRepository.Delete(id);
-        }
-
-        public async Task<List<CardModel>> GetCards(string id = "")
-        {
-            return await CardRepository.GetCards(id);
+            return base.Update(entityModel);
         }
     }
 }

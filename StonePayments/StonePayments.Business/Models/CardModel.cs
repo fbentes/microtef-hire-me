@@ -4,7 +4,7 @@ using StonePayments.Util.Attributes;
 
 namespace StonePayments.Business
 {
-    public class CardModel: BaseEntity
+    public class CardModel: BaseEntityModel
     {
         public CustomerModel Customer { get; set; }
 

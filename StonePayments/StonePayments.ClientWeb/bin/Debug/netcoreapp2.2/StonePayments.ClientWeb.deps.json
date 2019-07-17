@@ -570,11 +570,22 @@
         }
       },
       "StonePayments.Util/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.0.0.0"
+        },
         "runtime": {
           "StonePayments.Util.dll": {}
         },
         "compile": {
           "StonePayments.Util.dll": {}
+        }
+      },
+      "EntityFramework.Reference/6.0.0.0": {
+        "runtime": {
+          "EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3794,6 +3805,11 @@
     },
     "StonePayments.Util/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityFramework.Reference/6.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

@@ -4,7 +4,7 @@ using System;
 
 namespace StonePayments.Business
 {
-    public class TransactionModel: BaseEntity, ITransactionModel
+    public class TransactionModel: BaseEntityModel, ITransactionModel
     {
         [RequiredValue(nameof(StonePaymentResource.CardNumberNotNull))]
         [RangeLengthValues(12, 19, nameof(StonePaymentResource.CardNumberBetween12_19_Digits))]

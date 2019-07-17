@@ -17,7 +17,7 @@ namespace StonePayments.Util
         /// <param name="entity">Objeto a ser validado com anotações em cada uma de suas propriedades.</param>
         /// <param name="errorList">Lista de mensagems para cada propriedade inválida. </param>
         /// <returns></returns>
-        public static bool IsValid(IBaseEntity entity, out ValidationErrorList errorList)
+        public static bool IsValid(IBaseEntityModel entity, out ValidationErrorList errorList)
         {
             errorList = new ValidationErrorList();
 
@@ -29,7 +29,7 @@ namespace StonePayments.Util
             return errorList.Count == 0;
         }
 
-        public static void ValidProperty(IBaseEntity entity, PropertyInfo propertyInfo, ref ValidationErrorList errorList)
+        public static void ValidProperty(IBaseEntityModel entity, PropertyInfo propertyInfo, ref ValidationErrorList errorList)
         {
             object[] attributes = propertyInfo.GetCustomAttributes(true);
 

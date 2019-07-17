@@ -187,8 +187,6 @@
     <Compile Include="DataBase\StonePaymentsEntitiesCustom.cs" />
     <Compile Include="Repositories\CardRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
-    <Compile Include="Repositories\ICardRepository.cs" />
-    <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Services\CardService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\ICardService.cs" />

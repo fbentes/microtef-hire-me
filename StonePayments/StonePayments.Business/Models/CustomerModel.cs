@@ -3,7 +3,7 @@ using StonePayments.Util.Attributes;
 
 namespace StonePayments.Business
 {
-    public class CustomerModel: BaseEntity
+    public class CustomerModel: BaseEntityModel
     {
         [RequiredValue(nameof(StonePaymentResource.NameNotNull))]
         public string Name { get; set; }
