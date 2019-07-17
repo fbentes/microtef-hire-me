@@ -171,4 +171,19 @@
   <data name="EnterNumbersOnly" xml:space="preserve">
     <value>Digite apenas números !</value>
   </data>
+  <data name="CreditLimitNotNull" xml:space="preserve">
+    <value>O campo CreditLimit não pode ser nulo !</value>
+  </data>
+  <data name="NameNotNull" xml:space="preserve">
+    <value>O campo Nome não pode ser nulo !</value>
+  </data>
+  <data name="CreditLimitMinValueEqualZero" xml:space="preserve">
+    <value>O campo CreditLimit deve ser no mínimo igual a 0 !</value>
+  </data>
+  <data name="ExpirationDateNotNull" xml:space="preserve">
+    <value>O campo ExpirationDate não pode ser nulo !</value>
+  </data>
+  <data name="HasPasswordNotNull" xml:space="preserve">
+    <value>O campo HasPassword não pode ser nulo !</value>
+  </data>
 </root>

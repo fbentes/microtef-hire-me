@@ -11,7 +11,7 @@
     <Property Name="CardBrand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="HasPassword" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HasPassword" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Customer1" Relationship="Self.FK__Card__Customer__6383C8BA" FromRole="Card" ToRole="Customer" />
     <NavigationProperty Name="Transactions" Relationship="Self.FK__Transactio__Card__628FA481" FromRole="Card" ToRole="Transaction" />
   </EntityType>

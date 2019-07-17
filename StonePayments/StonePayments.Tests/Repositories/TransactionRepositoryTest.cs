@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StonePayments.Server.Repository;
+using StonePayments.Server.Repositories;
 using StonePayments.Business;
 using LightInject;
 using System.Collections.Generic;

@@ -8,11 +8,11 @@ using System.Collections.Generic;
 
 namespace StonePayments.Server.Tests.Services
 {
-
     [TestClass]
     public class TransactionServiceTest: BaseTest
     {
         public ITransactionService TransactionService { get; set; }
+
         public TransactionServiceTest()
         {
             this.TransactionService = serviceContainer.GetInstance<ITransactionService>();
@@ -60,7 +60,7 @@ namespace StonePayments.Server.Tests.Services
             {
                 List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
 
-                Assert.IsTrue(true);
+                Assert.IsTrue(false);
             }
             catch (SendTransactionException E)
             {
@@ -84,7 +84,7 @@ namespace StonePayments.Server.Tests.Services
             {
                 List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
 
-                Assert.IsTrue(true);
+                Assert.IsTrue(false);
             }
             catch (SendTransactionException E)
             {
@@ -108,7 +108,7 @@ namespace StonePayments.Server.Tests.Services
             {
                 List<TransactionModel> resultList = await TransactionService.SendTransaction(transactionModel);
 
-                Assert.IsTrue(true);
+                Assert.IsTrue(false);
             }
             catch (SendTransactionException E)
             {

@@ -130,6 +130,8 @@
     <Compile Include="Controllers\TransactionControllerTest.cs" />
     <Compile Include="BaseTest.cs" />
     <Compile Include="Extensions\AssertExtension.cs" />
+    <Compile Include="Services\CardServiceTest.cs" />
+    <Compile Include="Services\CustomerServiceTest.cs" />
     <Compile Include="Services\TransactionServiceTest.cs" />
     <Compile Include="Utils\CryptographyTest.cs" />
     <Compile Include="Repositories\TransactionRepositoryTest.cs" />

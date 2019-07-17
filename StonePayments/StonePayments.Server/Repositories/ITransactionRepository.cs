@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StonePayments.Server.Repository
+namespace StonePayments.Server.Repositories
 {
     public interface ITransactionRepository
     {

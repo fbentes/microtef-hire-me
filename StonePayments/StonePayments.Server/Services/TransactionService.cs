@@ -1,6 +1,6 @@
 ﻿using LightInject;
 using StonePayments.Business;
-using StonePayments.Server.Repository;
+using StonePayments.Server.Repositories;
 using StonePayments.Util;
 using System.Collections.Generic;
 using System.Threading.Tasks;

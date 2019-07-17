@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using StonePayments.Util;
 
-namespace StonePayments.Server.Repository
+namespace StonePayments.Server.Repositories
 {
     /// <summary>
     /// Classe responsável por todas as transações de cartão com o banco de dados.
@@ -107,13 +107,15 @@ namespace StonePayments.Server.Repository
 
         /// <summary>
         /// Retorna a lista de transações efetuadas por cartão, ou todas as transações.
+        /// Realiza um "ResultTransformer" da classe Persistente Transaction para a classe de
+        /// negócio TransactionModel que é utilizada pelos projetos clientes (Desktop, Web ou Mobile).
         /// </summary>
-        /// <returns>Lista de objetos Transaction</returns>
+        /// <returns>Lista de objetos TransactionModel</returns>
         public async Task<List<TransactionModel>> GetTransactions(long? cardNumber = null)
         {
             using (var context = new StonePaymentsEntitiesCustom())
             {
-                var results =  ( from t in 
+                var result =  ( from t in 
                                       await (
                                          from t0 in context.Transactions
                                          where cardNumber != null && t0.Card1.Number == cardNumber ||
@@ -146,7 +148,7 @@ namespace StonePayments.Server.Repository
                                          
                                      }).ToList<TransactionModel>();
 
-                return results;
+                return result;
             }
         }
     }

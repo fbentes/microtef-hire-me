@@ -1,7 +1,7 @@
 ﻿using LightInject;
 using LightInject.Web;
 using StonePayments.Server.Controllers;
-using StonePayments.Server.Repository;
+using StonePayments.Server.Repositories;
 using StonePayments.Server.Services;
 using System;
 using System.Collections.Generic;
@@ -38,6 +38,10 @@ namespace StonePayments.Server
             container.EnablePerWebRequestScope();
 
             container.EnableWebApi(GlobalConfiguration.Configuration);
+
+            container.Register<ICardRepository, CardRepository>();
+
+            container.Register<ICustomerRepository, CustomerRepository>();
 
             container.Register<ITransactionRepository, TransactionRepository>();
 

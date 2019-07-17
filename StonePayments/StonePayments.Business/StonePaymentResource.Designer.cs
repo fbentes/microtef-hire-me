@@ -97,6 +97,24 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O campo CreditLimit deve ser no mínimo igual a 0 !.
+        /// </summary>
+        public static string CreditLimitMinValueEqualZero {
+            get {
+                return ResourceManager.GetString("CreditLimitMinValueEqualZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo CreditLimit não pode ser nulo !.
+        /// </summary>
+        public static string CreditLimitNotNull {
+            get {
+                return ResourceManager.GetString("CreditLimitNotNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O cliente não possui saldo disponível !.
         /// </summary>
         public static string CustomerHasNoAvailableBalance {
@@ -124,11 +142,38 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O campo ExpirationDate não pode ser nulo !.
+        /// </summary>
+        public static string ExpirationDateNotNull {
+            get {
+                return ResourceManager.GetString("ExpirationDateNotNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buscando todas as transações, aguarde ....
         /// </summary>
         public static string FetchingAllTransactions {
             get {
                 return ResourceManager.GetString("FetchingAllTransactions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo HasPassword não pode ser nulo !.
+        /// </summary>
+        public static string HasPasswordNotNull {
+            get {
+                return ResourceManager.GetString("HasPasswordNotNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo Nome não pode ser nulo !.
+        /// </summary>
+        public static string NameNotNull {
+            get {
+                return ResourceManager.GetString("NameNotNull", resourceCulture);
             }
         }
         

@@ -185,6 +185,14 @@
       <DependentUpon>StonePaymentsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\StonePaymentsEntitiesCustom.cs" />
+    <Compile Include="Repositories\CardRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\ICardRepository.cs" />
+    <Compile Include="Repositories\ICustomerRepository.cs" />
+    <Compile Include="Services\CardService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\ICardService.cs" />
+    <Compile Include="Services\ICustomerService.cs" />
     <Compile Include="Services\ITransactionService.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Customer.cs">
@@ -247,7 +255,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <AdditionalFiles Include="DataBaseConnection.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -291,7 +298,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Themes\Theme1\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
