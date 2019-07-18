@@ -1,5 +1,4 @@
 ﻿using LightInject;
-using StonePayments.Business;
 using StonePayments.Business.Commands;
 using StonePayments.Business.Interfaces;
 using StonePayments.Util;

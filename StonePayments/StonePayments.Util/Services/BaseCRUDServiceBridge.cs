@@ -5,6 +5,12 @@ using System.Threading.Tasks;
 
 namespace StonePayments.Util.Services
 {
+    /// <summary>
+    /// Esta classe implementa o padrão Bridge para operações CRUD com a classe BaseCRUDRepository que
+    /// implementa IBaseCRUDRepository.
+    /// </summary>
+    /// <typeparam name="D">Interface das entidades do modelo.</typeparam>
+    /// <typeparam name="E">Exceções personalizadas para a entidade do modelo D.</typeparam>
     public class BaseCRUDServiceBridge<D, E> : BaseEntityValidateModelService<D, E>,
                                                 IBaseCRUDServiceBridge<D>
                                                 where D : IBaseEntityModel
