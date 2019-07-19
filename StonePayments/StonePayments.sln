@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StonePayments.Business", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.UnitTests", "StonePayments.UnitTests\StonePayments.UnitTests.csproj", "{A28FEC48-85B1-49BE-8357-A9ADEDF367A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StonePayments.ClientWeb", "StonePayments.ClientWeb\StonePayments.ClientWeb.csproj", "{F30B0734-7C28-4F10-8467-26803496A57F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A28FEC48-85B1-49BE-8357-A9ADEDF367A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28FEC48-85B1-49BE-8357-A9ADEDF367A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28FEC48-85B1-49BE-8357-A9ADEDF367A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30B0734-7C28-4F10-8467-26803496A57F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30B0734-7C28-4F10-8467-26803496A57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30B0734-7C28-4F10-8467-26803496A57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30B0734-7C28-4F10-8467-26803496A57F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

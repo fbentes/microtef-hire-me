@@ -42,7 +42,7 @@ namespace StonePayments.UnitTests
         [TestMethod]
         public void TestEncrypt()
         {
-            string EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=senha;", keyString);
+            string EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=USUARIO;Password=SENHA;", keyString);
 
             Assert.IsNotNull(EncryptedPassword);
         }
@@ -50,7 +50,7 @@ namespace StonePayments.UnitTests
         [TestMethod]
         public void TestDecrypt()
         {
-            string EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=sa;Password=senha;", keyString);
+            string EncryptedPassword = Cryptography.Encrypt(@"data source=DESKTOP-QGINSHI\SQLEXPRESS;initial catalog=StonePayments;user id=USUARIO;Password=SENHA;", keyString);
 
             string DecryptedPassword = Cryptography.Decrypt(EncryptedPassword, keyString);
 

@@ -53,6 +53,7 @@ namespace StonePayments.Server
 
             container.Register<IBaseCRUDRepository<CustomerModel>, CustomerRepository>();
             container.Register<IBaseCRUDServiceBridge<CustomerModel>, CustomerService>();
+            container.Register<ICustomerController, CustomerController>();
 
             #endregion
 

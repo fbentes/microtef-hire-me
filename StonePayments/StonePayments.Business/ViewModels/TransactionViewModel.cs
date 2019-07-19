@@ -1,7 +1,7 @@
 ﻿using LightInject;
 using StonePayments.Business.Commands;
 using StonePayments.Business.Interfaces;
-using StonePayments.Util;
+using StonePayments.Util.ViewModels;
 using System.Collections.ObjectModel;
 
 namespace StonePayments.Business.ViewModels

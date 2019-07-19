@@ -11,7 +11,7 @@
     <Property Name="CardBrand" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="HasPassword" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="HasPassword" Type="varchar" MaxLength="5" Nullable="false" />
   </EntityType>
   <EntityType Name="Customer">
     <Key>

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "ed4fb23ea5aa7f93e1646354b4f7b1f56e6909ed"
+    "signature": "13cd59298d82ac92d002cb915588ab2bbc30eba0"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,12 +9,37 @@
     ".NETStandard,Version=v2.0/": {
       "StonePayments.Business/1.0.0": {
         "dependencies": {
+          "LightInject": "5.5.0",
+          "LightInject.Annotation": "1.1.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.2",
-          "StonePayments.Util": "1.0.0"
+          "StonePayments.Util": "1.0.0",
+          "System.Net.Http.Formatting": "5.2.7.0"
         },
         "runtime": {
           "StonePayments.Business.dll": {}
+        }
+      },
+      "LightInject/5.5.0": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LightInject.dll": {
+            "assemblyVersion": "5.5.0.0",
+            "fileVersion": "5.5.0.0"
+          }
+        }
+      },
+      "LightInject.Annotation/1.1.0": {
+        "dependencies": {
+          "LightInject": "5.5.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/LightInject.Annotation.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -31,9 +56,29 @@
           }
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "StonePayments.Util/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.0.0.0"
+        },
         "runtime": {
           "StonePayments.Util.dll": {}
+        }
+      },
+      "System.Net.Http.Formatting/5.2.7.0": {
+        "runtime": {
+          "System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "5.2.7.0",
+            "fileVersion": "5.2.61128.0"
+          }
+        }
+      },
+      "EntityFramework.Reference/6.0.0.0": {
+        "runtime": {
+          "EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
         }
       }
     }
@@ -43,6 +88,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "LightInject/5.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Az0YTUmcZy8Dtq86uizwGHli9VjzjJ9ORp6pbFiIB9cAWrzbiMtRXnqSMLpagu4vpJqtEVOjYaxTUvMPYclJIg==",
+      "path": "lightinject/5.5.0",
+      "hashPath": "lightinject.5.5.0.nupkg.sha512"
+    },
+    "LightInject.Annotation/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sZZpnoBRo20Ul5i8Vn8NIjIpTqhzPCwcghhQ5R36iJobmEyPjIy3qiTSVL24Ax+6aYdz/v7Vz4m/35qCVjSk3w==",
+      "path": "lightinject.annotation/1.1.0",
+      "hashPath": "lightinject.annotation.1.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -65,8 +124,25 @@
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
     "StonePayments.Util/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Net.Http.Formatting/5.2.7.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityFramework.Reference/6.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

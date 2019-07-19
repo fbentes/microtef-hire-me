@@ -17,9 +17,9 @@ namespace StonePayments.Server.Repositories
         {
             var customer = new Customer
             {
-                Id = entityModel.Id,
+                Id = (entityModel.Id == Guid.Empty ? Guid.NewGuid() : entityModel.Id),
                 Nome = entityModel.Name,
-                CreditLimit = entityModel.CreditLimit
+                CreditLimit = entityModel.CreditLimit.Value
             };
 
             context.Customers.Add(customer);
@@ -34,7 +34,7 @@ namespace StonePayments.Server.Repositories
                             select c).FirstOrDefaultAsync<Customer>().GetAwaiter().GetResult();
             
             customer.Nome = entityModel.Name;
-            customer.CreditLimit = entityModel.CreditLimit;
+            customer.CreditLimit = entityModel.CreditLimit.Value;
         }
 
         protected override void PrepareEntityToDelete(

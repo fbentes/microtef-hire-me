@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace StonePayments.Util
+namespace StonePayments.Util.ViewModels
 {
     /// <summary>
     /// Classe mãe para classes da camada ViewModel para a implementação do padrão MVVM.
@@ -9,12 +9,17 @@ namespace StonePayments.Util
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        protected bool IsPropertyChangedNotNull
+        {
+            get
+            {
+                return PropertyChanged != null;
+            }
+        }
+
         protected void OnPropertyChange(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

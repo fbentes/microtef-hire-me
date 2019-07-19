@@ -186,4 +186,16 @@
   <data name="HasPasswordNotNull" xml:space="preserve">
     <value>O campo HasPassword não pode ser nulo !</value>
   </data>
+  <data name="CustomerSendOk" xml:space="preserve">
+    <value>Cliente enviado com sucesso !</value>
+  </data>
+  <data name="CustomerDeleteOk" xml:space="preserve">
+    <value>Cliente deletado com sucesso !</value>
+  </data>
+  <data name="CustomerUpdateOk" xml:space="preserve">
+    <value>Cliente alterado com sucesso !</value>
+  </data>
+  <data name="CreditLimitAllowOnlyNumber" xml:space="preserve">
+    <value>O campo CreditLimit só aceita números !</value>
+  </data>
 </root>

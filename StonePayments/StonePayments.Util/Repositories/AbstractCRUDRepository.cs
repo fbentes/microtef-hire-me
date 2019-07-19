@@ -59,7 +59,14 @@ namespace StonePayments.Util.Repositories
                 {
                     trans.Rollback();
 
-                    throw (E)Activator.CreateInstance(typeof(E), E.Message);
+                    string message = E.Message;
+
+                    if(E.InnerException?.InnerException != null)
+                    {
+                        message = E.InnerException?.InnerException.Message;
+                    }
+
+                    throw (E)Activator.CreateInstance(typeof(E), message);
                 }
             }
         }

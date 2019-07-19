@@ -97,6 +97,15 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O campo CreditLimit só aceita números !.
+        /// </summary>
+        public static string CreditLimitAllowOnlyNumber {
+            get {
+                return ResourceManager.GetString("CreditLimitAllowOnlyNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O campo CreditLimit deve ser no mínimo igual a 0 !.
         /// </summary>
         public static string CreditLimitMinValueEqualZero {
@@ -115,6 +124,15 @@ namespace StonePayments.Business {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cliente deletado com sucesso !.
+        /// </summary>
+        public static string CustomerDeleteOk {
+            get {
+                return ResourceManager.GetString("CustomerDeleteOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O cliente não possui saldo disponível !.
         /// </summary>
         public static string CustomerHasNoAvailableBalance {
@@ -129,6 +147,24 @@ namespace StonePayments.Business {
         public static string CustomerNotFound {
             get {
                 return ResourceManager.GetString("CustomerNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cliente enviado com sucesso !.
+        /// </summary>
+        public static string CustomerSendOk {
+            get {
+                return ResourceManager.GetString("CustomerSendOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cliente alterado com sucesso !.
+        /// </summary>
+        public static string CustomerUpdateOk {
+            get {
+                return ResourceManager.GetString("CustomerUpdateOk", resourceCulture);
             }
         }
         

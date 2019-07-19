@@ -12,3 +12,8 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Release\netstandard2.0\StonePayments.Business.csproj.CopyComplete
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Release\netstandard2.0\StonePayments.Business.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\obj\Release\netstandard2.0\StonePayments.Business.pdb
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Release\netstandard2.0\System.Net.Http.Formatting.dll
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Release\netstandard2.0\EntityFramework.dll
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Release\netstandard2.0\StonePayments.Util.dll.config
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Release\netstandard2.0\System.Net.Http.Formatting.xml
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Business\bin\Release\netstandard2.0\EntityFramework.xml
