@@ -1,4 +1,3 @@
-using LightInject;
 using StonePayments.Business;
 using StonePayments.Business.Interfaces;
 using StonePayments.Business.ViewModels;
@@ -10,7 +9,6 @@ namespace StonePayments.ClientWeb
 {
     public partial class CustomerWebView : Page, IViewObservable
     {
-        [Inject]
         public ICustomerViewModel CustomerViewModel { get; set; }
 
         public CustomerWebView()

@@ -3,7 +3,7 @@
 namespace StonePayments.ClientWPF.Views
 {
     /// <summary>
-    /// Interaction logic for MessageWaitingProcess.xaml
+    /// Classe responsável para informar espera de processamento para o usuário.
     /// </summary>
     public partial class MessageWaitingProcessWindow : Window
     {

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Client\obj\Debug\
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\obj\Debug\
 StonePayments.ClientWPF
 none
 false
 DEBUG;TRACE
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.Client\App.xaml
+C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWPF\App.xaml
 3230900373
 
 91492846410
-127-955824804
+1261142228343
 Views\GetTransactionsWindow.xaml;Views\MessageWaitingProcessWindow.xaml;Views\TransactionWindow.xaml;
 
 True

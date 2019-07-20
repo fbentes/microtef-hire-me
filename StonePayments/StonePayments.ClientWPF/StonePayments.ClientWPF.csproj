@@ -47,9 +47,6 @@
     <Reference Include="LightInject.Annotation, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LightInject.Annotation.1.1.0\lib\net46\LightInject.Annotation.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Syncfusion.Licensing, Version=17.2460.0.34, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Licensing.17.2.0.34\lib\net46\Syncfusion.Licensing.dll</HintPath>
     </Reference>
@@ -148,13 +145,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StonePayments.Util\StonePayments.Util.csproj">
-      <Project>{1e71ad29-8527-4ec6-9815-9ad249cb59f6}</Project>
-      <Name>StonePayments.Util</Name>
-    </ProjectReference>
     <ProjectReference Include="..\StonePayments.Business\StonePayments.Business.csproj">
       <Project>{da5b7672-ea31-4053-8059-7366ce459b77}</Project>
       <Name>StonePayments.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StonePayments.Util\StonePayments.Util.csproj">
+      <Project>{1e71ad29-8527-4ec6-9815-9ad249cb59f6}</Project>
+      <Name>StonePayments.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,9 +1,6 @@
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\DataObjectLayer.View.Web.Estoque.dll.config
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\DataObjectLayer.View.Web.Estoque.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\DataObjectLayer.View.Web.Estoque.pdb
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.Annotation.dll
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.dll
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.Web.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\StonePayments.Business.dll
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\StonePayments.Util.dll
@@ -14,11 +11,6 @@ C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\Sto
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\StonePayments.Business.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\StonePayments.Util.pdb
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\StonePayments.Util.dll.config
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.pdb
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.xml
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.Annotation.pdb
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.Web.pdb
-C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\LightInject.Web.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\System.ValueTuple.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\Newtonsoft.Json.xml
 C:\Users\fbent\Documents\GitHub\StonePayments\microtef-hire-me\StonePayments\StonePayments.ClientWeb\bin\System.Net.Http.Formatting.xml
