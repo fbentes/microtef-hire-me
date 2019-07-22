@@ -5,13 +5,13 @@
 Baixar o arquivo "SQLServerDataBase/Backup/StonePaymentsDataBase" e restaurá-lo numa instância do SQL Server 2017/2018.
 Além do SQL Server, foram usados o Visual Studio 2019 Community e o IIS 10 no Windows 10.
 
-## No arquivo "Utils\CryptographyTest.cs" do projeto StonePayments.Tests:
+## No arquivo "Utils\CryptographyTest.cs" do projeto StonePayments.UnitTests:
 
 * Caso seja alterado o parâmetro cryptography.GenerateAPassKey diferente de "Teste para a Stone" 
 como já está codificado, executar o CryptographyTest.cs para gerar a nova KeyString criptografada 
-via debug (linha 18) e setá-la para StonePayments.Util.KeyStringCryptography.VALUE (no projeto StonePayments.Util);
+via debug (linha 17) e setá-la para StonePayments.Util.KeyStringCryptography.VALUE (no projeto StonePayments.Util);
 
-* Na linha 46, gerar e copiar via debug a StringConnection criptografada para o seu SQL Server e colá-la no campo
+* Na linha 45, gerar e copiar via debug a StringConnection criptografada para o seu SQL Server e colá-la no campo
 "ConnectionString" do arquivo "DataBaseConnection.json" (que está no mesmo diretório do arquivo StonePayments.sln).
 
 
