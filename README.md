@@ -1,3 +1,5 @@
+## O diagrama de componentes StonePaymentsSolutionPackageDiagram.jpeg na pasta raíz contém a arquitetura da solução.
+
 # Seguir os passos inicias de configuração 
 
 Baixar o arquivo "SQLServerDataBase/Backup/StonePaymentsDataBase" e restaurá-lo numa instância do SQL Server.
@@ -39,7 +41,6 @@ escrita (DocumentDB armazenando json), mas devido a falta de tempo não foi poss
 do CQRS, os IDs das entidades persistentes estão com o tipo no SQL Server uniqueidentifier (System.Guid no C#) e não 
 bigint com autoincrement (long no C#).
 
-## O diagrama de componentes StonePaymentsSolutionPackageDiagram.jpeg na pasta raíz contém a arquitetura da solução.
 
 __________________________________________________________________________________________________________________________
 
