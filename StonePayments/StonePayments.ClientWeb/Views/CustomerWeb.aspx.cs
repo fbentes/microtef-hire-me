@@ -21,15 +21,23 @@ namespace StonePayments.ClientWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            gridViewCustomer.TypeEntityModel = typeof(CustomerModel);
+
             gridViewCustomer.RowEditing += GridViewCustomer_RowEditing;
             gridViewCustomer.RowDeleting += GridViewCustomer_RowDeleting;
             btnSalvar.Click += BtnSalvar_Click;
 
             if (!IsPostBack)
             {
-                gridViewCustomer.TypeEntityModel = typeof(CustomerModel);
                 SetDataSource();
             }
+        }
+
+        private void clearFields()
+        {
+            lblId.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtCreditLimit.Text = string.Empty;
         }
 
         private void SetDataSource()
@@ -45,7 +53,7 @@ namespace StonePayments.ClientWeb
                 Name = txtName.Text
             };
 
-            if(string.IsNullOrEmpty(txtCreditLimit.Text))
+            if (string.IsNullOrEmpty(txtCreditLimit.Text))
             {
                 customerModel.CreditLimit = null;
             }
@@ -53,13 +61,13 @@ namespace StonePayments.ClientWeb
             {
                 double result;
 
-                if(double.TryParse(txtCreditLimit.Text, out result))
+                if (double.TryParse(txtCreditLimit.Text, out result))
                 {
                     customerModel.CreditLimit = result;
                 }
                 else
                 {
-                    Response.Write("<script language='javascript'>alert('"+StonePaymentResource.CreditLimitAllowOnlyNumber+"');</script>");
+                    Response.Write("<script language='javascript'>alert('" + StonePaymentResource.CreditLimitAllowOnlyNumber + "');</script>");
                     return;
                 }
             };
@@ -77,9 +85,16 @@ namespace StonePayments.ClientWeb
                 CustomerViewModel.UpdateCustomerCommand.Execute(null);
             }
 
+            clearFields();
+
             SetDataSource();
         }
 
+        /// <summary>
+        /// Método usado para o evento RowEditing ao clicar no botão editar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GridViewCustomer_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
         {
             string id = gridViewCustomer.DataKeys[e.NewEditIndex].Value.ToString();
@@ -100,9 +115,14 @@ namespace StonePayments.ClientWeb
                 txtCreditLimit.Text = CustomerViewModel.CustomerModel.CreditLimit.ToString();
             }
 
-            e.Cancel = true;
+            e.Cancel = true; // Evita que o row corrente fique editável.
         }
 
+        /// <summary>
+        /// Método usado para o evento RowDeleting ao clicar no botão excluir.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GridViewCustomer_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
         {
             object id = gridViewCustomer.DataKeys[e.RowIndex].Value;

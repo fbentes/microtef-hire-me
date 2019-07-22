@@ -29,20 +29,6 @@ namespace StonePayments.Util.ViewWeb
             }
         }
 
-        /*
-        private void ColumnIdInvisivle()
-        {
-            foreach(DataControlField column in Columns)
-            {
-                if(column.HeaderText.ToLower() == "id")
-                {
-                    column.Visible = false;
-                    break;
-                }
-            }
-        }
-        */
-
         private void AddFieldColumn()
         {
             foreach(var property in TypeEntityModel.GetProperties())

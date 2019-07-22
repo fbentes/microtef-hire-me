@@ -25,11 +25,11 @@ namespace StonePayments.Server.Tests.Services
 
             var transactionModel = new TransactionModel
             {
-                CardNumber = 1234654789324,
+                CardNumber = 5323467684667,
                 Amount = Math.Round(r.NextDouble() + r.Next(1, 100), 2),
                 Type = TransactionType.Credit,
                 Number = (byte)new Random().Next(1,36),
-                Password = "123456"
+                Password = "555666"
             };
 
             try

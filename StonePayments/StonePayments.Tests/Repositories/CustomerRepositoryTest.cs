@@ -51,7 +51,7 @@ namespace StonePayments.Server.Tests.Repository
 
             var customerModel = new CustomerModel
             {
-                Id = Guid.Parse("86A8E8BC-1E31-4A69-A50B-770E2979200B"),
+                Id = Guid.Parse("033A4298-DAB6-4617-A657-087B41D6F003"),
                 Name = "Fulano de Tal",
                 CreditLimit = Math.Round(r.NextDouble() + r.Next(1, 5000), 2)
             };
@@ -75,8 +75,8 @@ namespace StonePayments.Server.Tests.Repository
 
             var customerModel = new CustomerModel
             {
-                Id = Guid.Parse("A0FD7EBD-88B7-4A33-ACAA-E0593276D05C"),
-                Name = "Ronaldo Bogado",
+                Id = Guid.Parse("28579849-b1ce-4548-a4c3-84123be841cb"),
+                Name = "Fulano de tal",
                 CreditLimit = Math.Round(r.NextDouble() + r.Next(1, 5000), 2)
             };
 

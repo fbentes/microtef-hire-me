@@ -60,7 +60,7 @@ namespace StonePayments.UnitTests
         [TestMethod]
         public void TestEncryptPassword()
         {
-            string encryptedPassword = Cryptography.Encrypt("654321", keyString);
+            string encryptedPassword = Cryptography.Encrypt("123456", keyString);
 
             Assert.IsNotNull(encryptedPassword);
         }

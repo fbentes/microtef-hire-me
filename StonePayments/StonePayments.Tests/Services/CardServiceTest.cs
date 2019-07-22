@@ -29,7 +29,7 @@ namespace StonePaymentsServer.Tests.Services
                 Id = Guid.NewGuid(),
                 Customer = new CustomerModel
                 {
-                    Id = Guid.Parse("86A8E8BC-1E31-4A69-A50B-770E2979200B")
+                    Id = Guid.Parse("3B751149-2CE7-4DC2-A244-46AECC73169B")
                 },
                 CardBrand = CardBrand.AmericanExpress,
                 ExpirationDate = DateTime.Now,
@@ -59,7 +59,7 @@ namespace StonePaymentsServer.Tests.Services
                 Id = Guid.NewGuid(),
                 Customer = new CustomerModel
                 {
-                    Id = Guid.Parse("035B2462-AD85-4F0A-BAF7-6BFB4D900D0B")
+                    Id = Guid.Parse("3B751149-2CE7-4DC2-A244-46AECC73169B")
                 },
                 CardBrand = CardBrand.AmericanExpress,
                 ExpirationDate = DateTime.Now,

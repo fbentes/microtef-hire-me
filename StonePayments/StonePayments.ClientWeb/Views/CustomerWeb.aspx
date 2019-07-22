@@ -37,7 +37,7 @@
               </tr>
               <tr>
                   <td colspan="2">
-                      <asp:Button ID="btnSalvar" runat="server" Text="Salvar" />
+                      <asp:Button ID="btnSalvar" runat="server" Text="Save" />
                   </td>
               </tr>
               <tr>

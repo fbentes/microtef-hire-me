@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
-using StonePayments.Util;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
-using System.Collections.ObjectModel;
 
 namespace StonePayments.Business.ViewModels
 {
@@ -58,27 +55,6 @@ namespace StonePayments.Business.ViewModels
             }
         }
         
-        /// <summary>
-        /// Método para validar as propriedades do objeto antes de enviá-lo para o servidor.
-        /// </summary>
-        /// <returns>Retorna true se passou na validação, e false caso contrário.</returns>
-        private bool isValidProperties()
-        {
-            ValidationErrorList errorList;
-
-            bool isValid = ValidationProperties.IsValid(customerViewModel.CustomerModel, out errorList);
-
-            if (!isValid)
-            {
-                customerViewModel.MainViewObservable.SendResultMessage(
-                    errorList.ToString(), StonePaymentResource.ValidationTitle);
-
-                return false;
-            }
-
-            return true;
-        }
-
         public void Execute(object parameter)
         {
             try
