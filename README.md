@@ -1,4 +1,4 @@
-## O diagrama de componentes StonePaymentsSolutionPackageDiagram.jpeg na pasta raíz contém a arquitetura da solução. E o arquivo StonePaymentsEntityElationshipModel.jpg contém o DER.
+## O diagrama de componentes StonePaymentsSolutionPackageDiagram.jpeg na pasta raíz contém a arquitetura da solução, e o arquivo StonePaymentsEntityElationshipModel.jpg contém o DER.
 
 # Seguir os passos inicias de configuração 
 
