@@ -41,6 +41,7 @@ escrita (DocumentDB armazenando json), mas devido a falta de tempo não foi poss
 do CQRS, os IDs das entidades persistentes estão com o tipo no SQL Server uniqueidentifier (System.Guid no C#) e não 
 bigint com autoincrement (long no C#).
 
+O CRUD para a entidade Card não foi propositalmente feito para a dedicação de mais tempo para questões criativas. Para inserir dados nessa entidade, é preciso inserir diretamente na tabela no SQL Server, gerando seu id pelo site https://www.guidgenerator.com/online-guid-generator.aspx.
 
 __________________________________________________________________________________________________________________________
 
