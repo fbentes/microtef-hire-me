@@ -3,7 +3,7 @@
 # Seguir os passos inicias de configuração 
 
 Baixar o arquivo "SQLServerDataBase/Backup/StonePaymentsDataBase" e restaurá-lo numa instância do SQL Server 2017/2018.
-Foi usado o Visual Studio 2019 Community e o IIS 10 no Windows 10.
+Além do SQL Server, foram usados o Visual Studio 2019 Community e o IIS 10 no Windows 10.
 
 ## No arquivo "Utils\CryptographyTest.cs" do projeto StonePayments.Tests:
 
